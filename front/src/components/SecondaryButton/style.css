@@ -2,8 +2,11 @@
   background-color: #1e4db7;
   border-radius: 10px;
   height: 60px;
-  position: relative;
   width: 228px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: relative;
 }
 
 .secondary-button .text-wrapper-5 {
@@ -11,12 +14,9 @@
   font-family: "Noto Sans", Helvetica;
   font-size: 22px;
   font-weight: 600;
-  height: 59px;
-  left: 14px;
+  /* Remove the absolute positioning and use flexbox for centering */
   letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
   text-align: center;
-  top: 0;
-  width: 200px;
+  /* The width can be 100% to use the full width of the button for centering */
+  width: 100%;
 }
