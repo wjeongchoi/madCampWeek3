@@ -1,15 +1,15 @@
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/
-
 import React from "react";
 import "./style.css";
 
-export const SecondaryButton = (): JSX.Element => {
+interface SecondaryButtonProps {
+  onClick?: () => void; // Optional click handler
+  label: string; // Text label for the button
+}
+
+export const SecondaryButton = ({ onClick, label }: SecondaryButtonProps): JSX.Element => {
   return (
-    <div className="secondary-button">
-      <div className="text-wrapper-5">바로 시작하기</div>
+    <div className="secondary-button" onClick={onClick}>
+      <div className="text-wrapper-5">{label}</div>
     </div>
   );
 };
