@@ -1,18 +1,14 @@
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/
-
 import React from "react";
 import "./style.css";
 
-interface Props {
-  className: any;
+interface LogoProps {
+  onClick?: () => void; // Optional click handler
+  className?: string; // Optional additional class name
 }
 
-export const Logo = ({ className }: Props): JSX.Element => {
+export const Logo = ({ onClick, className = "" }: LogoProps): JSX.Element => {
   return (
-    <div className={`logo ${className}`}>
+    <div className={`logo ${className}`} onClick={onClick}> {/* Use the onClick and className props */}
       <div className="overlap-group">
         <div className="text-wrapper">AIpple</div>
         <div className="group">
