@@ -1,80 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vw; /* Add padding relative to the viewport width */
   height: 109px;
-  position: relative;
-  width: 1280px;
+  width: 100%; /* Full width of the parent container */
 }
 
 .header .frame {
+  display: flex;
   align-items: center;
-  display: inline-flex;
-  gap: 5px;
-  left: 252px;
-  position: absolute;
-  top: 33px;
+  gap: 1vw; /* Relative gap based on the viewport width */
 }
 
-.header .text-wrapper-2 {
-  color: #000000;
-  font-family: "Noto Sans", Helvetica;
-  font-size: 25px;
-  font-weight: 400;
-  height: 50px;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1px;
-  position: relative;
-  text-align: center;
-  width: 113px;
-}
-
-.header .text-wrapper-3 {
-  color: #000000;
-  font-family: "Noto Sans", Helvetica;
-  font-size: 25px;
-  font-weight: 400;
-  height: 50px;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-top: -1px;
-  position: relative;
-  text-align: center;
-  width: 136px;
-}
-
+.header .text-wrapper-2,
+.header .text-wrapper-3,
 .header .text-wrapper-4 {
   color: #000000;
   font-family: "Noto Sans", Helvetica;
-  font-size: 25px;
+  font-size: 1.95vw; /* Relative font size based on the viewport width */
   font-weight: 400;
-  height: 50px;
   letter-spacing: 0;
   line-height: normal;
-  margin-top: -1px;
-  position: relative;
-  text-align: center;
-  width: 143px;
+  cursor: pointer;
 }
 
 .header .overlap {
   background-color: #d6edff;
-  border-radius: 29px;
-  height: 58px;
-  left: 1189px;
-  position: absolute;
-  top: 29px;
-  width: 58px;
+  border-radius: 50%; /* Make it a perfect circle */
+  height: 5vw; /* Relative height based on the viewport width */
+  width: 5vw; /* Relative width based on the viewport width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .header .person-sharp {
-  height: 36px;
-  left: 11px;
-  position: absolute;
-  top: 11px;
-  width: 36px;
+  height: 60%; /* Relative to its parent */
+  width: 60%; /* Relative to its parent */
 }
 
 .header .logo-instance {
-  left: 33px !important;
-  position: absolute !important;
-  top: 28px !important;
+  order: -1; /* This will ensure the logo is always first */
+  flex-grow: 0; /* Prevent the logo from growing */
+}
+
+/* Add media queries for different breakpoints if necessary */
+@media (max-width: 768px) {
+  .header .text-wrapper-2,
+  .header .text-wrapper-3,
+  .header .text-wrapper-4 {
+    font-size: 5vw; /* Increase font size for smaller screens */
+  }
 }
