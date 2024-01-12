@@ -1,0 +1,10 @@
+:root {
+  --collection-1-error: rgba(251, 75, 109, 1);
+  --collection-1-primary: rgba(28, 154, 241, 1);
+  --collection-1-primarylight: rgba(215, 238, 255, 1);
+  --collection-1-secondary: rgba(28, 80, 180, 1);
+  --collection-1-secondary-2: rgba(41, 111, 244, 1);
+  --collection-1-secondarylight: rgba(191, 212, 252, 1);
+  --collection-1-success: rgba(64, 201, 131, 1);
+  --collection-1-warning: rgba(253, 210, 81, 1);
+}

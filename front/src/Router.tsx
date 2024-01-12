@@ -1,14 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Header } from './components/Header'; // Adjust the import path as needed
 import { ClassList } from './screens/ClassList';
+import { Header } from './components/Header';
+import { Home } from './screens/Home';
 
 const AppRouter = (): JSX.Element => {
   return (
     <Router>
-      <Header className={undefined} />
+      <Header className={undefined} divClassName={undefined} />
       <Routes>
         <Route path="/classList" element={<ClassList />} />
+        <Route path="/" element={<Home />} />
+
 
       </Routes>
     </Router>

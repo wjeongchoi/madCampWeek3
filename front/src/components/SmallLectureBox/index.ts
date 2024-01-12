@@ -1,0 +1,1 @@
+export { SmallLectureBox } from "./SmallLectureBox";

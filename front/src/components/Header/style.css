@@ -4,7 +4,7 @@
   width: 1280px;
 }
 
-.header .frame-2 {
+.header .frame {
   align-items: center;
   display: inline-flex;
   gap: 5px;
@@ -55,14 +55,22 @@
   width: 143px;
 }
 
-.header .my-page {
-  background-color: #d9d9d9;
+.header .overlap {
+  background-color: #d6edff;
   border-radius: 29px;
   height: 58px;
   left: 1189px;
   position: absolute;
   top: 29px;
   width: 58px;
+}
+
+.header .person-sharp {
+  height: 36px;
+  left: 11px;
+  position: absolute;
+  top: 11px;
+  width: 36px;
 }
 
 .header .logo-instance {

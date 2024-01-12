@@ -14,12 +14,12 @@ export const Logo = ({ className }: Props): JSX.Element => {
   return (
     <div className={`logo ${className}`}>
       <div className="overlap-group">
-        <div className="div">AIpple</div>
+        <div className="text-wrapper">AIpple</div>
         <div className="group">
           <div className="overlap-group">
             <div className="rectangle" />
+            <div className="div" />
             <div className="rectangle-2" />
-            <div className="rectangle-3" />
           </div>
         </div>
       </div>
