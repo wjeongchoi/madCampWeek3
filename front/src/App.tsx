@@ -1,13 +1,23 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Header from './components/header'; // Header 컴포넌트 경로
+import Header from './components/Header';
+import Tab1 from './components/Tab1';
+import Tab2 from './components/Tab2';
+import Tab3 from './components/Tab3';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      {/* 여기에 다른 컨텐츠나 컴포넌트 추가 */}
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/tab1" element={<Tab1 />} />
+          <Route path="/tab2" element={<Tab2 />} />
+          <Route path="/tab3" element={<Tab3 />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
