@@ -10,7 +10,7 @@
 
 .logo .text-wrapper {
   color: #000000;
-  font-family: "MesloLGS NF-Regular", Helvetica;
+  font-family: 'MesloLGS NF', sans-serif; /* Fall back to sans-serif if MesloLGS NF is not available */
   font-size: 30px;
   font-weight: 400;
   height: 41px;
