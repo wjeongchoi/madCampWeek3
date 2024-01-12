@@ -1,0 +1,135 @@
+.class-list {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.class-list .overlap-wrapper {
+  background-color: #ffffff;
+  height: 832px;
+  overflow: hidden;
+  width: 1280px;
+}
+
+.class-list .overlap-2 {
+  height: 1172px;
+  position: relative;
+}
+
+.class-list .overlap-3 {
+  height: 832px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1280px;
+}
+
+.class-list .side-bar-instance {
+  left: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.class-list .design-component-instance-node {
+  border-radius: unset !important;
+}
+
+.class-list .header-instance {
+  background-color: transparent !important;
+  left: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.class-list .frame-3 {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 65px 38px;
+  left: 279px;
+  position: absolute;
+  top: 109px;
+  width: 968px;
+}
+
+.class-list .lecture-box-2 {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #d9d9d9;
+  border-radius: 10px;
+  height: 329px;
+  position: relative;
+  width: 404px;
+}
+
+.class-list .overlap-4 {
+  height: 50px;
+  left: 7px;
+  position: absolute;
+  top: 7px;
+  width: 331px;
+}
+
+.class-list .text-wrapper-8 {
+  color: #000000;
+  font-family: "Noto Sans", Helvetica;
+  font-size: 30px;
+  font-weight: 400;
+  height: 50px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 129px;
+}
+
+.class-list .text-wrapper-9 {
+  color: #000000;
+  font-family: "Noto Sans", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  height: 46px;
+  left: 103px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 2px;
+  width: 228px;
+}
+
+.class-list .img {
+  height: 213px;
+  left: 388px;
+  object-fit: cover;
+  position: absolute;
+  top: -1352px;
+  width: 330px;
+}
+
+.class-list .text-wrapper-10 {
+  color: #000000;
+  font-family: "Noto Sans", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  height: 46px;
+  left: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 272px;
+  width: 359px;
+}
+
+.class-list .image-2 {
+  height: 213px;
+  left: -81px;
+  object-fit: cover;
+  position: absolute;
+  top: -1352px;
+  width: 330px;
+}

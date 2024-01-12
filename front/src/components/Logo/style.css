@@ -1,0 +1,64 @@
+.logo {
+  height: 58px;
+  width: 197px;
+}
+
+.logo .overlap-group {
+  height: 58px;
+  position: relative;
+}
+
+.logo .div {
+  color: #000000;
+  font-family: "MesloLGS NF-Regular", Helvetica;
+  font-size: 30px;
+  font-weight: 400;
+  height: 41px;
+  left: 42px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  width: 155px;
+}
+
+.logo .group {
+  height: 58px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 55px;
+}
+
+.logo .rectangle {
+  background-color: #1e4db7;
+  border-radius: 15px;
+  height: 16px;
+  left: -8px;
+  position: absolute;
+  top: 22px;
+  transform: rotate(-65deg);
+  width: 53px;
+}
+
+.logo .rectangle-2 {
+  background-color: #1a9bfc;
+  border-radius: 15px;
+  height: 17px;
+  left: 8px;
+  position: absolute;
+  top: 21px;
+  transform: rotate(65deg);
+  width: 56px;
+}
+
+.logo .rectangle-3 {
+  background-color: #fec90f;
+  border-radius: 20px;
+  height: 14px;
+  left: 16px;
+  position: absolute;
+  top: 29px;
+  width: 22px;
+}

@@ -1,0 +1,72 @@
+.header {
+  height: 109px;
+  position: relative;
+  width: 1280px;
+}
+
+.header .frame-2 {
+  align-items: center;
+  display: inline-flex;
+  gap: 5px;
+  left: 252px;
+  position: absolute;
+  top: 33px;
+}
+
+.header .text-wrapper-2 {
+  color: #000000;
+  font-family: "Noto Sans", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  height: 50px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: 113px;
+}
+
+.header .text-wrapper-3 {
+  color: #000000;
+  font-family: "Noto Sans", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  height: 50px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: 136px;
+}
+
+.header .text-wrapper-4 {
+  color: #000000;
+  font-family: "Noto Sans", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  height: 50px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: 143px;
+}
+
+.header .my-page {
+  background-color: #d9d9d9;
+  border-radius: 29px;
+  height: 58px;
+  left: 1189px;
+  position: absolute;
+  top: 29px;
+  width: 58px;
+}
+
+.header .logo-instance {
+  left: 33px !important;
+  position: absolute !important;
+  top: 28px !important;
+}

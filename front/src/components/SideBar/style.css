@@ -1,0 +1,17 @@
+.side-bar {
+  background-color: #d6edff;
+  height: 832px;
+  width: 238px;
+}
+
+.side-bar .frame {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 492px;
+  left: 33px;
+  position: relative;
+  top: 109px;
+  width: 182px;
+}
