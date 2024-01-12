@@ -5,8 +5,15 @@ import { Logo } from "../../components/Logo";
 import { SecondaryButton } from "../../components/SecondaryButton";
 import { SmallLectureBox } from "../../components/SmallLectureBox";
 import "./style.css";
+import { useNavigate } from "react-router";
 
 export const Home = (): JSX.Element => {
+  const navigate = useNavigate();
+
+  const navigateToClassRecomm = () => {
+    navigate("/classRecomm");
+  };
+
   return (
     <div className="home">
       <div className="div-2">
@@ -17,7 +24,7 @@ export const Home = (): JSX.Element => {
               <div className="div-wrapper">
                 <p className="p">당신의 A+을 위한 동영상 강의 AI 학습 도우미</p>
               </div>
-              <Logo className="logo-2" />
+              <Logo />
             </div>
           </div>
         </div>
@@ -28,7 +35,7 @@ export const Home = (): JSX.Element => {
               <span className="text-wrapper-8">의 맞춤형 강의 추천 받기</span>
             </p>
           </div>
-          <SecondaryButton />
+          <SecondaryButton label="바로 시작하기" onClick={navigateToClassRecomm} />
         </div>
         <div className="frame-4">
           <div className="group-2">
