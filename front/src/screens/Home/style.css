@@ -138,24 +138,34 @@
   width: 236px;
 }
 
-.home .frame-5 {
-  align-items: flex-start;
-  display: inline-flex;
-  flex: 0 0 auto;
-  gap: 44px;
-  position: relative;
+.frame-5 {
+  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  max-width: 100%; /* Ensures the container doesn't stretch beyond its parent width */
+  gap: 20px; /* Adjust as needed for spacing between boxes */
+  scrollbar-width: thin; /* Optional: for thinner scrollbar in Firefox */
+  scrollbar-color: blue grey; /* Optional: for custom scrollbar colors in Firefox */
 }
 
-.home .overlap-wrapper {
-  background-color: #ffffff;
-  border: 1px solid;
-  border-color: #d9d9d9;
-  border-radius: 10px;
-  height: 252px;
-  position: relative;
-  width: 404px;
+/* Style for Webkit browsers like Chrome, Safari */
+.frame-5::-webkit-scrollbar {
+  height: 8px; /* Height of the scrollbar */
 }
 
+.frame-5::-webkit-scrollbar-track {
+  background: grey; /* Color of the track */
+}
+
+.frame-5::-webkit-scrollbar-thumb {
+  background-color: blue; /* Color of the scrollbar thumb */
+  border-radius: 20px; /* Rounded corners on the scrollbar thumb */
+}
+
+.small-lecture-box {
+  flex: 0 0 auto; /* Ensures that boxes don't shrink and maintain their size */
+  width: 400px; /* Or whatever width your boxes should have */
+}
 .home .overlap-3 {
   height: 233px;
   left: 7px;

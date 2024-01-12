@@ -47,17 +47,12 @@ export const Home = (): JSX.Element => {
           <div className="frame-5">
             <SmallLectureBox />
             <SmallLectureBox />
-            <div className="overlap-wrapper">
-              <div className="overlap-3">
-                <div className="text-wrapper-9">CS000</div>
-                <div className="text-wrapper-10">Introduce to ~~~~~</div>
-                <img className="img" alt="Image" src="/img/image-1-1.png" />
-                <Heart property1 />
-              </div>
+            <SmallLectureBox />
+            <SmallLectureBox />
+            <SmallLectureBox />
             </div>
           </div>
         </div>
       </div>
-    </div>
   );
 };
