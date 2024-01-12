@@ -1,0 +1,65 @@
+.class-recomm {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.class-recomm .div-2 {
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(215, 238, 255) 100%);
+    background-color: rgba(255, 255, 255, 1);
+    height: 832px;
+    position: relative;
+    width: 1280px;
+}
+
+.class-recomm .header-instance {
+    background-color: transparent !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+}
+
+.class-recomm .design-component-instance-node {
+    color: #1e4db7 !important;
+    font-family: "Noto Sans-SemiBold", Helvetica !important;
+    font-weight: 600 !important;
+}
+
+.class-recomm .frame-2 {
+    height: 226px;
+    left: 445px;
+    position: absolute;
+    top: 303px;
+    width: 390px;
+}
+
+.class-recomm .a-ipple {
+    color: #000000;
+    font-family: "Noto Sans-SemiBold", Helvetica;
+    font-size: 40px;
+    font-weight: 400;
+    height: 166px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: -1px;
+    width: 390px;
+}
+
+.class-recomm .span {
+    font-weight: 600;
+}
+
+.class-recomm .text-wrapper-6 {
+    font-family: "MesloLGS NF-Regular", Helvetica;
+}
+
+.class-recomm .secondary-button-instance {
+    left: 81px !important;
+    position: absolute !important;
+    top: 166px !important;
+}
