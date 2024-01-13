@@ -56,5 +56,6 @@
 .header .logo-instance {
   order: -1; /* This will ensure the logo is always first */
   flex-grow: 0; /* Prevent the logo from growing */
+  margin-left:20px;
 }
 
