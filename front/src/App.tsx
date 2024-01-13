@@ -5,6 +5,8 @@ import { ClassList } from './screens/ClassList';
 import { Home } from './screens/Home';
 import { ClassRecomm } from './screens/ClassRecomm';
 import { MyPage } from './screens/MyPage';
+import { ClassRecommAsk } from './screens/ClassRecommAsk';
+import { WatchClass } from './screens/WatchClass';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/myPage" element={<MyPage />} />
           <Route path="/classRecomm" element={<ClassRecomm />} />
+          <Route path="/classRecommAsk" element={<ClassRecommAsk />} />
+          <Route path="/watchClass" element={<WatchClass />} />
         </Routes>
       </div>
     </Router>
