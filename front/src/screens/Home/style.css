@@ -1,18 +1,21 @@
 .home {
-  background-color: rgba(255, 255, 255, 1);
+  background: linear-gradient(
+    180deg,
+    rgb(255, 255, 255) 0%,
+    rgb(215, 238, 255) 100%
+  );
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  min-height: 100vh; /* Ensure minimum height of the viewport */
 }
 
 .home .div-2 {
-  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(215, 238, 255) 100%);
-  background-color: rgba(255, 255, 255, 1);
   height: 832px;
   overflow: hidden;
   position: relative;
-  width: 1280px;
+  width: 100%;
 }
 
 .home .overlap-2 {
@@ -20,7 +23,7 @@
   left: 0;
   position: absolute;
   top: 0;
-  width: 1280px;
+  width: 100%;
 }
 
 .home .header-instance {
@@ -35,27 +38,25 @@
 }
 
 .home .frame-wrapper {
-  background-color: var(--collection-1-secondarylight);
+  background-color: #bfd4fc;
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   height: 143px;
-  left: 0;
   position: absolute;
   top: 105px;
-  width: 1280px;
+  width: 100%;
 }
 
 .home .frame-2 {
-  align-items: center;
-  display: inline-flex;
-  gap: 80px;
-  left: 222px;
-  position: relative;
-  top: 45px;
+  display: flex;
+  flex-direction: row; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  gap: 30px; /* Space between logo and text */
 }
 
 .home .div-wrapper {
-  height: 41px;
   position: relative;
-  width: 561px;
 }
 
 .home .p {
@@ -63,28 +64,20 @@
   font-family: "Noto Sans", Helvetica;
   font-size: 30px;
   font-weight: 600;
-  height: 41px;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 0;
+  text-align: center; /* Center text */
 }
 
 .home .logo-2 {
-  height: 58.15px !important;
   position: relative !important;
 }
 
 .home .frame-3 {
-  align-items: center;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  gap: 22px;
-  left: 433px;
-  position: absolute;
-  top: 646px;
+  align-items: center; /* Center items horizontally */
+  width: 100%; /* Full width */
+  gap: 40px;
+  margin-top: 650px;
 }
 
 .home .a-ipple-wrapper {
@@ -96,7 +89,7 @@
 
 .home .a-ipple {
   color: #000000;
-  font-family: "MesloLGS NF-Regular", Helvetica;
+  font-family: "MesloLGS NF", sans-serif; /* Fall back to sans-serif if MesloLGS NF is not available */
   font-size: 30px;
   font-weight: 400;
   height: 41px;
@@ -110,7 +103,7 @@
 
 .home .span {
   color: #000000;
-  font-family: "MesloLGS NF-Regular", Helvetica;
+  font-family: "MesloLGS NF", sans-serif; /* Fall back to sans-serif if MesloLGS NF is not available */
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 0;
@@ -119,13 +112,14 @@
 .home .text-wrapper-8 {
   font-family: "Noto Sans", Helvetica;
   font-weight: 600;
+  position: relative; /* If needed */
 }
 
 .home .frame-4 {
   align-items: flex-start;
   display: inline-flex;
   flex-direction: column;
-  gap: 29px;
+  gap: 50px;
   left: 49px;
   position: absolute;
   top: 274px;
@@ -139,15 +133,15 @@
 
 .frame-5 {
   display: flex;
-  white-space: nowrap;
-  overflow-x: scroll;
-  max-width: 100%; /* Ensures the container doesn't stretch beyond its parent width */
+  flex-wrap: nowrap; /* Prevents the items from wrapping */
+  overflow-x: scroll; /* Enables horizontal scrolling */
+  max-width: 100%; /* Ensures the container fits its parent's width */
   gap: 20px; /* Adjust as needed for spacing between boxes */
-  scrollbar-width: thin; /* Optional: for thinner scrollbar in Firefox */
-  scrollbar-color: blue grey; /* Optional: for custom scrollbar colors in Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: blue grey;
 }
 
-/* Style for Webkit browsers like Chrome, Safari */
+
 .frame-5::-webkit-scrollbar {
   height: 8px; /* Height of the scrollbar */
 }
@@ -158,7 +152,7 @@
 
 .frame-5::-webkit-scrollbar-thumb {
   background-color: blue; /* Color of the scrollbar thumb */
-  border-radius: 20px; /* Rounded corners on the scrollbar thumb */
+  border-radius: 20px; /* Rounded corners of the scrollbar thumb */
 }
 
 .small-lecture-box {
@@ -210,4 +204,8 @@
   position: absolute;
   top: 44px;
   width: 305px;
+}
+.home .SecondaryButton {
+  position: relative; /* If needed */
+  /* Remove left, top, width, height properties if they were set */
 }
