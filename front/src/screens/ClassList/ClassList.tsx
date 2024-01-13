@@ -20,7 +20,11 @@ export const ClassList = (): JSX.Element => {
               sidebarButtonPropertyVariantClassName="design-component-instance-node"
               sidebarButtonPropertyVariantClassNameOverride="design-component-instance-node"
             />
-            <Header className="header-instance" divClassName={undefined} />
+            <Header
+              className="header-instance"
+              divClassName="design-component-instance-node"
+              activePage="classList"
+            />
           </div>
           <div className="frame-3">
             <LectureBox />

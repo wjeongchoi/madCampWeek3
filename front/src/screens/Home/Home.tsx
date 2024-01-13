@@ -18,7 +18,7 @@ export const Home = (): JSX.Element => {
     <div className="home">
       <div className="div-2">
         <div className="overlap-2">
-          <Header className="header-instance" divClassName="design-component-instance-node" />
+        <Header className="header-instance" divClassName="design-component-instance-node" activePage="home" />
           <div className="frame-wrapper">
             <div className="frame-2">
               <div className="div-wrapper">

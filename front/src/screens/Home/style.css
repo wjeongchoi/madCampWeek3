@@ -31,8 +31,7 @@
 }
 
 .home .design-component-instance-node {
-  color: #1e4db7 !important;
-  font-weight: 600 !important;
+  border-radius: unset !important;
 }
 
 .home .frame-wrapper {

@@ -8,7 +8,7 @@ export const ClassRecomm = (): JSX.Element => {
     return (
         <div className="class-recomm">
             <div className="div-2">
-                <Header className="header-instance" divClassName="design-component-instance-node" />
+            <Header className="header-instance" divClassName="design-component-instance-node" activePage="classRecomm" />
                 <div className="frame-2">
                     <p className="a-ipple">
                         <span className="span">

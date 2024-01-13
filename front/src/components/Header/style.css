@@ -1,39 +1,47 @@
 * {
   box-sizing: border-box;
 }
-
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start; /* Align items to the start */
   padding: 0 2vw; /* Add padding relative to the viewport width */
   height: 109px;
   width: 100%; /* Full width of the parent container */
 }
 
+/* Frame adjustments to align items in a column */
 .header .frame {
   display: flex;
-  align-items: center;
+  flex-direction: row; 
+  align-items: flex-start; /* Align items to the start */
   gap: 1vw; /* Relative gap based on the viewport width */
+  margin-right: auto; /* Push the frame to the right */
 }
 
+/* Normal state for all text-wrapper links */
 .header .text-wrapper-2,
 .header .text-wrapper-3,
 .header .text-wrapper-4 {
-  color: #000000;
+  color: #000000; /* Default text color */
   font-family: "Noto Sans", Helvetica;
-  font-size: 1.95vw; /* Relative font size based on the viewport width */
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: normal;
+  font-size: 1.95vw;
+  font-weight: 400; /* Normal font weight */
   cursor: pointer;
 }
+
+/* Add a new active class for the highlighted state */
+.header .active {
+  color: #1e4db7; /* Highlight color */
+  font-weight: 600; /* Bold font weight */
+}
+
 
 .header .overlap {
   background-color: #d6edff;
   border-radius: 50%; /* Make it a perfect circle */
-  height: 5vw; /* Relative height based on the viewport width */
-  width: 5vw; /* Relative width based on the viewport width */
+  height: 4vw; /* Reduced size */
+  width: 4vw; /* Reduced size */
   display: flex;
   justify-content: center;
   align-items: center;

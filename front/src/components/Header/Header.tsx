@@ -2,13 +2,18 @@ import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import { Logo } from "../Logo";
 import "./style.css";
-
+// Add a new prop to the interface for the active page
 interface Props {
   className: any;
   divClassName: any;
+  activePage?: "home" | "classList" | "classRecomm"; // Specify the possible values for activePage
 }
 
-export const Header = ({ className, divClassName }: Props): JSX.Element => {
+export const Header = ({
+  className,
+  divClassName,
+  activePage,
+}: Props): JSX.Element => {
   const navigate = useNavigate();
 
   // Existing navigation functions
@@ -19,17 +24,41 @@ export const Header = ({ className, divClassName }: Props): JSX.Element => {
   // New navigation function for myPage
   const navigateToMyPage = () => navigate("/myPage");
 
+  const isActive = (pageName: string) =>
+    activePage === pageName ? "active" : "";
+
   return (
     <div className={`header ${className}`}>
+      <Logo className="logo-instance" onClick={() => navigate("/")} />
       <div className="frame">
-        <div className={`text-wrapper-2 ${divClassName}`} onClick={navigateToHome}>홈</div>
-        <div className="text-wrapper-3" onClick={navigateToClassList}>강의 목록</div>
-        <div className="text-wrapper-4" onClick={navigateToClassRecomm}>강의 추천</div>
+        <div
+          className={`text-wrapper-2 ${divClassName} ${isActive("home")}`}
+          onClick={() => navigate("/")}
+        >
+          홈
+        </div>
+        <div
+          className={`text-wrapper-3 ${divClassName} ${isActive("classList")}`}
+          onClick={() => navigate("/classList")}
+        >
+          강의 목록
+        </div>
+        <div
+          className={`text-wrapper-4 ${divClassName} ${isActive(
+            "classRecomm"
+          )}`}
+          onClick={() => navigate("/classRecomm")}
+        >
+          강의 추천
+        </div>
       </div>
-      <div className="overlap" onClick={navigateToMyPage}>
-        <img className="person-sharp" alt="Person sharp" src="/img/person-sharp-1.svg" />
+      <div className="overlap" onClick={() => navigate("/myPage")}>
+        <img
+          className="person-sharp"
+          alt="Person sharp"
+          src="/img/person-sharp-1.svg"
+        />
       </div>
-      <Logo className="logo-instance" onClick={navigateToHome} />
     </div>
   );
 };

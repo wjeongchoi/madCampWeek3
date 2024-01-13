@@ -23,10 +23,8 @@
 }
 
 .class-recomm .design-component-instance-node {
-    color: #1e4db7 !important;
-    font-family: "Noto Sans-SemiBold", Helvetica !important;
-    font-weight: 600 !important;
-}
+    border-radius: unset !important;
+  }
 
 .class-recomm .frame-2 {
     display: flex;
