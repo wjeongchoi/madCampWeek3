@@ -16,14 +16,6 @@ export const Header = ({
 }: Props): JSX.Element => {
   const navigate = useNavigate();
 
-  // Existing navigation functions
-  const navigateToHome = () => navigate("/");
-  const navigateToClassList = () => navigate("/classList");
-  const navigateToClassRecomm = () => navigate("/classRecomm");
-
-  // New navigation function for myPage
-  const navigateToMyPage = () => navigate("/myPage");
-
   const isActive = (pageName: string) =>
     activePage === pageName ? "active" : "";
 
