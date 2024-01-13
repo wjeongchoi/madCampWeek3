@@ -31,26 +31,7 @@ export const ClassList = (): JSX.Element => {
             <LectureBox />
             <LectureBox />
             <LectureBox />
-            <div className="lecture-box-2">
-              <div className="overlap-4">
-                <div className="text-wrapper-8">CS000</div>
-                <div className="text-wrapper-9">Introduce to ~~~~~</div>
-              </div>
-              <img className="img" alt="Image" src="/img/image-1-1.png" />
-              <div className="text-wrapper-10">
-                설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명
-              </div>
-            </div>
-            <div className="lecture-box-2">
-              <div className="overlap-4">
-                <div className="text-wrapper-8">CS000</div>
-                <div className="text-wrapper-9">Introduce to ~~~~~</div>
-              </div>
-              <img className="image-2" alt="Image" src="/img/image-1-1.png" />
-              <div className="text-wrapper-10">
-                설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명
-              </div>
-            </div>
+        
           </div>
         </div>
       </div>
