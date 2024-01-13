@@ -1,0 +1,22 @@
+.primary-button {
+    background-color: #1a9bfc;
+    border-radius: 10px;
+    height: 60px;
+    position: relative;
+    width: 228px;
+}
+
+.primary-button .text-wrapper {
+    color: #ffffff;
+    font-family: "Noto Sans-DisplaySemiBold", Helvetica;
+    font-size: 22px;
+    font-weight: 600;
+    height: 59px;
+    left: 14px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 200px;
+}
