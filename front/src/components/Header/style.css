@@ -25,7 +25,7 @@
 .header .text-wrapper-4 {
   color: #000000; /* Default text color */
   font-family: "Noto Sans", Helvetica;
-  font-size: 1.95vw;
+  font-size: 22px;
   font-weight: 400; /* Normal font weight */
   cursor: pointer;
 }
@@ -40,8 +40,8 @@
 .header .overlap {
   background-color: #d6edff;
   border-radius: 50%; /* Make it a perfect circle */
-  height: 4vw; /* Reduced size */
-  width: 4vw; /* Reduced size */
+  height: 50px; /* Reduced size */
+  width: 50px; /* Reduced size */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,11 +58,3 @@
   flex-grow: 0; /* Prevent the logo from growing */
 }
 
-/* Add media queries for different breakpoints if necessary */
-@media (max-width: 768px) {
-  .header .text-wrapper-2,
-  .header .text-wrapper-3,
-  .header .text-wrapper-4 {
-    font-size: 5vw; /* Increase font size for smaller screens */
-  }
-}
