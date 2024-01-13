@@ -1,0 +1,45 @@
+.horizontal-lecture {
+    border: 1px solid;
+    border-color: #d9d9d9;
+    border-radius: 10px;
+    height: 58px;
+    position: relative;
+    width: 601px;
+}
+
+.horizontal-lecture .text-wrapper {
+    color: #000000;
+    font-family: "Noto Sans-Regular", Helvetica;
+    font-size: 22px;
+    font-weight: 400;
+    height: 30px;
+    left: 43px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 12px;
+}
+
+.horizontal-lecture .div {
+    color: #000000;
+    font-family: "Noto Sans-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    height: 39px;
+    left: 134px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 9px;
+    width: 449px;
+}
+
+.horizontal-lecture.selected-true {
+    background-color: var(--collection-1-secondarylight);
+}
+
+.horizontal-lecture.selected-false {
+    background-color: #ffffff;
+}

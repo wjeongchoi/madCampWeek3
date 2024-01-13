@@ -1,0 +1,1 @@
+import { HorizontalLectureBox } from "./HorizontalLectureBox";
