@@ -1,0 +1,1 @@
+export { ClassRecommResult} from "./ClassRecommResult";
