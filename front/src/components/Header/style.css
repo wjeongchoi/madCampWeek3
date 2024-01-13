@@ -20,9 +20,7 @@
 }
 
 /* Normal state for all text-wrapper links */
-.header .text-wrapper-2,
-.header .text-wrapper-3,
-.header .text-wrapper-4 {
+.header .inactive {
   color: #000000; /* Default text color */
   font-family: "Noto Sans", Helvetica;
   font-size: 22px;

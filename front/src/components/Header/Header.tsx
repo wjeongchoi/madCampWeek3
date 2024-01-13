@@ -24,19 +24,19 @@ export const Header = ({
       <Logo className="logo-instance" onClick={() => navigate("/")} />
       <div className="frame">
         <div
-          className={`text-wrapper-2 ${divClassName} ${isActive("home")}`}
+          className={`inactive ${divClassName} ${isActive("home")}`}
           onClick={() => navigate("/")}
         >
           홈
         </div>
         <div
-          className={`text-wrapper-3 ${divClassName} ${isActive("classList")}`}
+          className={`inactive ${divClassName} ${isActive("classList")}`}
           onClick={() => navigate("/classList")}
         >
           강의 목록
         </div>
         <div
-          className={`text-wrapper-4 ${divClassName} ${isActive(
+          className={`inactive ${divClassName} ${isActive(
             "classRecomm"
           )}`}
           onClick={() => navigate("/classRecomm")}
