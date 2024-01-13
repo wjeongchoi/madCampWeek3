@@ -1,0 +1,1 @@
+export { ClassRecommFinal } from "./ClassRecommFinal";
