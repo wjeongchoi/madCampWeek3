@@ -1,0 +1,1 @@
+export { WatchClass } from "./WatchClass";
