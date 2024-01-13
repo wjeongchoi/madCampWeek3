@@ -13,7 +13,7 @@
 
 .class-recomm-ask .div-2 {
     height: 100vh;
-    position: absolute;
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -23,10 +23,10 @@
 
 .class-recomm-ask  .header-instance {
     background-color: transparent !important;
-    position: relative; /* Change from absolute to relative */
+    position: absolute; /* Change from absolute to relative */
     width: 100%; /* Ensure it spans the full width */
-    top: unset; /* Reset top positioning */
-    left: unset; /* Reset left positioning */
+    z-index: 10;
+
 }
 
 .class-recomm-ask .text-wrapper-4 {
