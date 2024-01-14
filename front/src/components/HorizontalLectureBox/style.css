@@ -1,18 +1,18 @@
 .horizontal-lecture {
-    border: 1px solid;
-    border-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
     border-radius: 10px;
     height: 58px;
     width: 601px;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: space-between; /* Space between title and date */
+    padding: 0 10px; /* Add padding on both sides */
 }
 
 .horizontal-lecture .frame {
+    display: flex;
     align-items: center;
-    display: inline-flex;
-    gap: 58px;
-    left: 25px;
-    position: relative;
-    top: 8px;
+    width: 100%; /* Take full width of the parent */
 }
 
 .horizontal-lecture .text-wrapper {
@@ -20,26 +20,15 @@
     font-family: "Noto Sans-DisplaySemiBold", Helvetica;
     font-size: 18px;
     font-weight: 600;
-    height: 39px;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1px;
-    position: relative;
-    width: 404px;
+    flex-grow: 1; /* Allow it to take available space */
+    text-align: left; /* Align text to the left */
 }
 
 .horizontal-lecture .div {
     color: #868686;
     font-family: "Noto Sans-Regular", Helvetica;
     font-size: 16px;
-    font-weight: 400;
-    height: 39px;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1px;
-    position: relative;
-    text-align: right;
-    width: 85px;
+    text-align: right; /* Align text to the right */
 }
 
 .horizontal-lecture.selected-true {
