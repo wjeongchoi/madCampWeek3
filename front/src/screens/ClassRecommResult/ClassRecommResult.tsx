@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import { Header } from "../../components/Header";
-import { LongLectureBox } from "../../components/LongLectureBox/LongLectureBox";
+import { LectureBox } from "../../components/LectureBox";
 
 export const ClassRecommResult = (): JSX.Element => {
     return (
@@ -25,9 +25,10 @@ export const ClassRecommResult = (): JSX.Element => {
                         </p>
                     </div>
                     <div className="frame-3">
-                        <LongLectureBox />
-                        <LongLectureBox />
-                        <LongLectureBox />
+                        <LectureBox />
+                        <LectureBox />
+                        <LectureBox />
+
                     </div>
                 </div>
             </div>
