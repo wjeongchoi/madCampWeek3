@@ -9,7 +9,7 @@ interface SecondaryButtonProps {
 export const SecondaryButton = ({ onClick, label }: SecondaryButtonProps): JSX.Element => {
   return (
     <div className="secondary-button" onClick={onClick}>
-      <div className="text-wrapper-5">{label}</div>
+      <div className="secondary-text-wrapper">{label}</div>
     </div>
   );
 };

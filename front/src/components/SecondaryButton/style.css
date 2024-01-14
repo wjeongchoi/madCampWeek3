@@ -9,14 +9,12 @@
   position: relative;
 }
 
-.secondary-button .text-wrapper-5 {
+.secondary-button .secondary-text-wrapper {
   color: #ffffff;
   font-family: "Noto Sans", Helvetica;
   font-size: 22px;
   font-weight: 600;
-  /* Remove the absolute positioning and use flexbox for centering */
   letter-spacing: 0;
   text-align: center;
-  /* The width can be 100% to use the full width of the button for centering */
   width: 100%;
 }
