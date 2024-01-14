@@ -1,11 +1,16 @@
 import React from "react";
 import "./style.css";
 
-export const SmallLectureBox = (): JSX.Element => {
+interface SmallLectureBoxProps {
+    text: string; // Prop for the text content
+    imageUrl: string; // Prop for the image URL
+}
+
+export const SmallLectureBox = ({ text, imageUrl }: SmallLectureBoxProps): JSX.Element => {
     return (
         <div className="small-lecture-box">
-            <p className="text-wrapper">[CS000] Convolutional Neural Networks for Visual Recognition</p>
-            <img className="image" alt="Image" src="img/image-1.png" />
+            <p className="small-text-wrapper">{text}</p>
+            <img className="image" alt="Lecture" src={imageUrl} />
         </div>
     );
 };
