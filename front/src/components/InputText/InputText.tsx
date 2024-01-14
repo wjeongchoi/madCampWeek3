@@ -1,10 +1,14 @@
 import React from "react";
 import "./style.css";
 
-export const InputText = (): JSX.Element => {
+interface InputTextProps {
+    label: string; // Prop for the text label
+}
+
+export const InputText = ({ label }: InputTextProps): JSX.Element => {
     return (
         <div className="input-text">
-            <div className="text-wrapper">아이디</div>
+            <div className="text-wrapper">{label}</div>
         </div>
     );
 };

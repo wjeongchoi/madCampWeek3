@@ -4,8 +4,12 @@
     border-color: #4b4a4a;
     border-radius: 10px;
     height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     position: relative;
     width: 380px;
+    padding-left: 24px; /* 왼쪽 패딩 추가 */
 }
 
 .input-text .text-wrapper {
@@ -13,11 +17,7 @@
     font-family: "Noto Sans-DisplaySemiBold", Helvetica;
     font-size: 22px;
     font-weight: 600;
-    height: 30px;
-    left: 24px;
     letter-spacing: 0;
     line-height: normal;
-    position: absolute;
-    top: 17px;
-    width: 317px;
+    text-align: left;
 }
