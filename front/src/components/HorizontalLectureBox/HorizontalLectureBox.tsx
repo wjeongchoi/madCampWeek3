@@ -1,23 +1,20 @@
-import PropTypes from "prop-types";
 import React from "react";
 import "./style.css";
 
-interface Props {
+interface HorizontalLectureBoxProps {
     selected: boolean;
-    className: any;
+    className?: string;
+    title: string; // Prop for the lecture title
+    date: string; // Prop for the lecture date
 }
 
-export const HorizontalLectureBox = ({ selected, className }: Props): JSX.Element => {
+export const HorizontalLectureBox = ({ selected, className = "", title, date }: HorizontalLectureBoxProps): JSX.Element => {
     return (
         <div className={`horizontal-lecture selected-${selected} ${className}`}>
             <div className="frame">
-                <div className="text-wrapper">[CS000] Introduction to ~~~~~~~~~~~</div>
-                <div className="div">2024-01-14</div>
+                <div className="text-wrapper">{title}</div>
+                <div className="div">{date}</div>
             </div>
         </div>
     );
-};
-
-HorizontalLectureBox.propTypes = {
-    selected: PropTypes.bool,
 };

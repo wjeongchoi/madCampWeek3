@@ -14,24 +14,30 @@ export const MyPage = (): JSX.Element => {
           <div className="frame-6">
             <div className="frame-7">
               <HorizontalLectureBox
-                className="design-component-instance-node"
-                selected={false}
-              />
-              <HorizontalLectureBox
-                className="design-component-instance-node"
-                selected={false}
-              />
-              <HorizontalLectureBox
-                className="design-component-instance-node"
-                selected={false}
-              />
-              <HorizontalLectureBox
-                className="design-component-instance-node"
                 selected={true}
+                title="[CS000] Introduction to Computer Science"
+                date="2024-01-14"
               />
               <HorizontalLectureBox
-                className="design-component-instance-node"
                 selected={false}
+                title="[CS000] Introduction to Computer Science"
+                date="2024-01-14"
+              />
+
+              <HorizontalLectureBox
+                selected={false}
+                title="[CS000] Introduction to Computer Science"
+                date="2024-01-14"
+              />
+              <HorizontalLectureBox
+                selected={false}
+                title="[CS000] Introduction to Computer Science"
+                date="2024-01-14"
+              />
+              <HorizontalLectureBox
+                selected={false}
+                title="[CS000] Introduction to Computer Science"
+                date="2024-01-14"
               />
             </div>
             <div className="text-wrapper-8">학습 중인 강의</div>
