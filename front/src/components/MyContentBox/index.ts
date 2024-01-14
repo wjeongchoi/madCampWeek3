@@ -1,1 +1,1 @@
-import { MyContentBox } from "./MyContentBox";
+export { MyContentBox } from "./MyContentBox";

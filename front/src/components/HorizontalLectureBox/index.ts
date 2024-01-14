@@ -1,1 +1,1 @@
-import { HorizontalLectureBox } from "./HorizontalLectureBox";
+export { HorizontalLectureBox } from "./HorizontalLectureBox";
