@@ -3,76 +3,59 @@
   border: 1px solid;
   border-color: #d9d9d9;
   border-radius: 10px;
-  height: 329px;
-  position: relative;
-  width: 404px;
+  height: 406px;
+  width: 338px;
 }
 
-.lecture-box .overlap-group-2 {
-  height: 50px;
-  left: 7px;
-  position: absolute;
-  top: 7px;
-  width: 331px;
-}
-
-.lecture-box .text-wrapper-5 {
-  color: #000000;
-  font-family: "Noto Sans", Helvetica;
-  font-size: 30px;
-  font-weight: 400;
-  height: 50px;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 129px;
-}
-
-.lecture-box .text-wrapper-6 {
-  color: #000000;
-  font-family: "Noto Sans", Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  height: 46px;
-  left: 103px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 2px;
-  width: 228px;
-}
-
-.lecture-box .overlap {
-  height: 258px;
+.lecture-box .frame {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
   left: 21px;
-  position: absolute;
-  top: 61px;
-  width: 359px;
+  position: relative;
+  top: 14px;
+}
+
+.lecture-box .text-wrapper {
+  color: #000000;
+  font-family: "Noto Sans-DisplaySemiBold", Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  width: 294px;
 }
 
 .lecture-box .image {
-  height: 213px;
-  left: 7px;
+  height: 166px;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 330px;
+  position: relative;
+  width: 285px;
 }
 
-.lecture-box .text-wrapper-7 {
-  color: #000000;
-  font-family: "Noto Sans", Helvetica;
+.lecture-box .div {
+  color: #868686;
+  font-family: "Noto Sans-Regular", Helvetica;
   font-size: 16px;
   font-weight: 400;
-  height: 46px;
-  left: 0;
+  height: 39px;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 212px;
-  width: 359px;
+  position: relative;
+  text-align: right;
+  width: 280px;
+}
+
+.lecture-box .text-wrapper-2 {
+  color: #000000;
+  font-family: "Noto Sans-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: 292px;
 }
