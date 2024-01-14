@@ -10,6 +10,7 @@ import { WatchClass } from './screens/WatchClass';
 import { ClassRecommFinal } from './screens/ClassRecommFinal';
 import { ClassRecommResult } from './screens/ClassRecommResult';
 import { ClassDetail } from './screens/ClassDetail';
+import { Login } from './screens/Login';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/classRecommResult" element={<ClassRecommResult />} />
           <Route path="/classDetail" element={<ClassDetail/>} />
           <Route path="/watchClass" element={<WatchClass />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>
