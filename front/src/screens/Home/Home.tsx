@@ -31,7 +31,6 @@ export const Home = (): JSX.Element => {
             </div>
           </div>
         </div>
-
         <div className="frame-4">
           <div className="group-2">
             <p className="a-ipple">
@@ -40,12 +39,26 @@ export const Home = (): JSX.Element => {
             </p>
           </div>
           <div className="frame-5">
-            <SmallLectureBox />
-            <SmallLectureBox />
-            <SmallLectureBox />
-            <SmallLectureBox />
-            <SmallLectureBox />
-            <SmallLectureBox />
+            <SmallLectureBox
+              text="[CS000] Convolutional Neural Networks for Visual Recognition"
+              imageUrl="img/image-1.png"
+            />
+            <SmallLectureBox
+              text="[CS000] Convolutional Neural Networks for Visual Recognition"
+              imageUrl="img/image-1.png"
+            />
+            <SmallLectureBox
+              text="[CS000] Convolutional Neural Networks for Visual Recognition"
+              imageUrl="img/image-1.png"
+            />
+            <SmallLectureBox
+              text="[CS000] Convolutional Neural Networks for Visual Recognition"
+              imageUrl="img/image-1.png"
+            />
+            <SmallLectureBox
+              text="[CS000] Convolutional Neural Networks for Visual Recognition"
+              imageUrl="img/image-1.png"
+            />
           </div>
         </div>
         <div className="frame-3">

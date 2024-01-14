@@ -12,7 +12,7 @@
 }
 
 .home .div-2 {
-  height: 832px;
+  min-height: 100vh;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -62,7 +62,7 @@
 .home .p {
   color: #000000;
   font-family: "Noto Sans", Helvetica;
-  font-size: 30px;
+  font-size: clamp(16px, calc(16px + 1vw), 30px); /* Minimum size, preferred size, maximum size */
   font-weight: 600;
   text-align: center; /* Center text */
 }
@@ -78,6 +78,7 @@
   width: 100%; /* Full width */
   gap: 40px;
   margin-top: 650px;
+  margin-bottom: 20px;
 }
 
 .home .a-ipple-wrapper {
@@ -137,23 +138,9 @@
   overflow-x: scroll; /* Enables horizontal scrolling */
   max-width: 100%; /* Ensures the container fits its parent's width */
   gap: 20px; /* Adjust as needed for spacing between boxes */
-  scrollbar-width: thin;
-  scrollbar-color: blue grey;
+
 }
 
-
-.frame-5::-webkit-scrollbar {
-  height: 8px; /* Height of the scrollbar */
-}
-
-.frame-5::-webkit-scrollbar-track {
-  background: grey; /* Color of the track */
-}
-
-.frame-5::-webkit-scrollbar-thumb {
-  background-color: blue; /* Color of the scrollbar thumb */
-  border-radius: 20px; /* Rounded corners of the scrollbar thumb */
-}
 
 .small-lecture-box {
   flex: 0 0 auto; /* Ensures that boxes don't shrink and maintain their size */
@@ -167,45 +154,6 @@
   width: 331px;
 }
 
-.home .text-wrapper-9 {
-  color: #000000;
-  font-family: "Noto Sans", Helvetica;
-  font-size: 30px;
-  font-weight: 400;
-  height: 50px;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 129px;
-}
-
-.home .text-wrapper-10 {
-  color: #000000;
-  font-family: "Noto Sans", Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  height: 46px;
-  left: 103px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 2px;
-  width: 228px;
-}
-
-.home .img {
-  height: 189px;
-  left: 23px;
-  object-fit: cover;
-  position: absolute;
-  top: 44px;
-  width: 305px;
-}
 .home .SecondaryButton {
-  position: relative; /* If needed */
-  /* Remove left, top, width, height properties if they were set */
+  position: relative;
 }
