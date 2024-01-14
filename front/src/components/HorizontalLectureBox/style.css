@@ -43,7 +43,7 @@
 }
 
 .horizontal-lecture.selected-true {
-    background-color: var(--collection-1-secondarylight);
+    background-color: #BFD4FC;
 }
 
 .horizontal-lecture.selected-false {
