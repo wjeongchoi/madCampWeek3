@@ -45,14 +45,46 @@ export const MyPage = (): JSX.Element => {
           <div className="frame-8">
             <div className="text-wrapper-9">내 학습 자료</div>
             <div className="frame-9">
-              <MyContentBox />
-              <MyContentBox />
-              <MyContentBox />
-              <MyContentBox />
-              <MyContentBox />
-              <MyContentBox />
-              <MyContentBox />
-              <MyContentBox />
+              <MyContentBox
+                lectureTitle="Lecture 0"
+                date="2024-01-14"
+                resourceTitle="수업 필기"
+              />
+              <MyContentBox
+                lectureTitle="Lecture 0"
+                date="2024-01-14"
+                resourceTitle="수업 필기"
+              />
+              <MyContentBox
+                lectureTitle="Lecture 0"
+                date="2024-01-14"
+                resourceTitle="수업 필기"
+              />
+              <MyContentBox
+                lectureTitle="Lecture 0"
+                date="2024-01-14"
+                resourceTitle="수업 필기"
+              />
+              <MyContentBox
+                lectureTitle="Lecture 0"
+                date="2024-01-14"
+                resourceTitle="수업 필기"
+              />
+              <MyContentBox
+                lectureTitle="Lecture 0"
+                date="2024-01-14"
+                resourceTitle="수업 필기"
+              />
+              <MyContentBox
+                lectureTitle="Lecture 0"
+                date="2024-01-14"
+                resourceTitle="수업 필기"
+              />
+              <MyContentBox
+                lectureTitle="Lecture 0"
+                date="2024-01-14"
+                resourceTitle="수업 필기"
+              />
             </div>
           </div>
         </div>
