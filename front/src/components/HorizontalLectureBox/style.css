@@ -3,37 +3,43 @@
     border-color: #d9d9d9;
     border-radius: 10px;
     height: 58px;
-    position: relative;
     width: 601px;
+}
+
+.horizontal-lecture .frame {
+    align-items: center;
+    display: inline-flex;
+    gap: 58px;
+    left: 25px;
+    position: relative;
+    top: 8px;
 }
 
 .horizontal-lecture .text-wrapper {
     color: #000000;
-    font-family: "Noto Sans-Regular", Helvetica;
-    font-size: 22px;
-    font-weight: 400;
-    height: 30px;
-    left: 43px;
+    font-family: "Noto Sans-DisplaySemiBold", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    height: 39px;
     letter-spacing: 0;
     line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 12px;
+    margin-top: -1px;
+    position: relative;
+    width: 404px;
 }
 
 .horizontal-lecture .div {
-    color: #000000;
+    color: #868686;
     font-family: "Noto Sans-Regular", Helvetica;
     font-size: 16px;
     font-weight: 400;
     height: 39px;
-    left: 134px;
     letter-spacing: 0;
     line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 9px;
-    width: 449px;
+    margin-top: -1px;
+    position: relative;
+    text-align: right;
+    width: 85px;
 }
 
 .horizontal-lecture.selected-true {

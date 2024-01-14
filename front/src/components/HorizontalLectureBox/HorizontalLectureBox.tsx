@@ -10,8 +10,10 @@ interface Props {
 export const HorizontalLectureBox = ({ selected, className }: Props): JSX.Element => {
     return (
         <div className={`horizontal-lecture selected-${selected} ${className}`}>
-            <div className="text-wrapper">CS000</div>
-            <div className="div">Introduction to ~~~~~~~~~~~</div>
+            <div className="frame">
+                <div className="text-wrapper">[CS000] Introduction to ~~~~~~~~~~~</div>
+                <div className="div">2024-01-14</div>
+            </div>
         </div>
     );
 };
