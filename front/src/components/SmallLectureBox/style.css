@@ -3,62 +3,31 @@
   border: 1px solid;
   border-color: #d9d9d9;
   border-radius: 10px;
-  height: 252px;
+  height: 261px;
   position: relative;
-  width: 404px;
+  width: 356px;
 }
 
-.small-lecture-box .overlap-group-2 {
-  height: 233px;
-  left: 7px;
-  position: absolute;
-  top: 7px;
-  width: 344px;
-}
-
-.small-lecture-box .text-wrapper-6 {
+.small-lecture-box .text-wrapper {
   color: #000000;
-  font-family: "Noto Sans", Helvetica;
-  font-size: 30px;
-  font-weight: 400;
-  height: 50px;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 129px;
-}
-
-.small-lecture-box .text-wrapper-7 {
-  color: #000000;
-  font-family: "Noto Sans", Helvetica;
+  font-family: "Noto Sans-DisplaySemiBold", Helvetica;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
   height: 46px;
-  left: 103px;
+  left: 20px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 2px;
-  width: 228px;
+  top: 15px;
+  width: 303px;
 }
 
 .small-lecture-box .image {
-  height: 189px;
-  left: 23px;
+  height: 177px;
+  left: 24px;
   object-fit: cover;
   position: absolute;
-  top: 44px;
-  width: 321px;
-}
-
-.small-lecture-box .property-1-true {
-  height: 31px !important;
-  left: 352px !important;
-  position: absolute !important;
-  top: 17px !important;
-  width: 31px !important;
+  top: 73px;
+  width: 300px;
 }
