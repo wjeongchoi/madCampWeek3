@@ -4,12 +4,15 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  height: 100vh;
 }
 
 .my-page .div-2 {
   height: 832px;
   position: relative;
   width: 100%;
+  height: 100vh;
+
 }
 
 .my-page .header-instance {
