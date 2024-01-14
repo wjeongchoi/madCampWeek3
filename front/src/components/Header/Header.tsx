@@ -44,7 +44,7 @@ export const Header = ({
           강의 추천
         </div>
       </div>
-      <div className="overlap" onClick={() => navigate("/myPage")}>
+      <div className="headeroverlap" onClick={() => navigate("/myPage")}>
         <img
           className="person-sharp"
           alt="Person sharp"

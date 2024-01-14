@@ -35,7 +35,7 @@
 }
 
 
-.header .overlap {
+.header .headeroverlap {
   background-color: #d6edff;
   border-radius: 50%; /* Make it a perfect circle */
   height: 50px; /* Reduced size */
