@@ -22,7 +22,7 @@ export const Header = ({
   return (
     <div className={`header ${className}`}>
       <Logo className="logo-instance" onClick={() => navigate("/")} />
-      <div className="frame">
+      <div className="headerframe">
         <div
           className={`inactive ${divClassName} ${isActive("home")}`}
           onClick={() => navigate("/")}

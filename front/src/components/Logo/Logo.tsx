@@ -11,7 +11,7 @@ export const Logo = ({ onClick, className = "" }: LogoProps): JSX.Element => {
     <div className={`logo ${className}`} onClick={onClick}> {/* Use the onClick and className props */}
       <div className="overlap-group">
         <div className="text-wrapper">AIpple</div>
-        <div className="group">
+        <div className="logogroup">
           <div className="overlap-group">
             <div className="rectangle" />
             <div className="div" />
