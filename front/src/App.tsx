@@ -11,6 +11,7 @@ import { ClassRecommFinal } from './screens/ClassRecommFinal';
 import { ClassRecommResult } from './screens/ClassRecommResult';
 import { ClassDetail } from './screens/ClassDetail';
 import { Login } from './screens/Login';
+import { SignUp } from './screens/SignUp';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/classDetail" element={<ClassDetail/>} />
           <Route path="/watchClass" element={<WatchClass />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signUp" element={<SignUp />} />
         </Routes>
       </div>
     </Router>
