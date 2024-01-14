@@ -1,43 +1,43 @@
 .sign-up {
-    background-color: rgba(255, 255, 255, 1);
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(215, 238, 255) 100%);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 100%;
+    height: 100vh;
 }
 
 .sign-up .div-2 {
-    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(215, 238, 255) 100%);
-    background-color: rgba(255, 255, 255, 1);
-    height: 832px;
-    position: relative;
-    width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh; /* 최소 높이 설정 */
+    padding-top: 60px; /* 헤더와의 간격 유지 */
 }
 
 .sign-up .header-instance {
     background-color: transparent !important;
-    left: 0 !important;
-    position: absolute !important;
-    top: 0 !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10; /* 헤더가 다른 요소들 위에 오도록 설정 */
 }
 
 .sign-up .frame-2 {
-    align-items: center;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 43px;
-    left: 397px;
-    position: absolute;
-    top: 183px;
 }
 
 .sign-up .frame-3 {
-    align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
+    display: flex;
     flex-direction: column;
+    align-items: flex-start; /* 자식 요소를 왼쪽으로 정렬 */
     gap: 27px;
-    position: relative;
 }
 
 .sign-up .text-wrapper-5 {
@@ -45,29 +45,12 @@
     font-family: "Noto Sans-DisplaySemiBold", Helvetica;
     font-size: 30px;
     font-weight: 600;
-    height: 40px;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-top: -1px;
-    position: relative;
-    text-align: center;
-    width: 111px;
+    text-align: left; /* 왼쪽 정렬 */
 }
 
 .sign-up .frame-4 {
-    align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
+    display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 23px;
-    position: relative;
-}
-
-.sign-up .input-text-instance {
-    width: 485px !important;
-}
-
-.sign-up .design-component-instance-node {
-    left: 31px !important;
-    width: 405px !important;
 }
