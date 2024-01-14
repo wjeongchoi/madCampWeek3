@@ -2,16 +2,13 @@ import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import { Logo } from "../Logo";
 import "./style.css";
-// Add a new prop to the interface for the active page
 interface Props {
   className: any;
-  divClassName: any;
   activePage?: "home" | "classList" | "classRecomm"; // Specify the possible values for activePage
 }
 
 export const Header = ({
   className,
-  divClassName,
   activePage,
 }: Props): JSX.Element => {
   const navigate = useNavigate();
@@ -24,19 +21,19 @@ export const Header = ({
       <Logo className="logo-instance" onClick={() => navigate("/")} />
       <div className="headerframe">
         <div
-          className={`inactive ${divClassName} ${isActive("home")}`}
+          className={`inactive ${isActive("home")}`}
           onClick={() => navigate("/")}
         >
           홈
         </div>
         <div
-          className={`inactive ${divClassName} ${isActive("classList")}`}
+          className={`inactive ${isActive("classList")}`}
           onClick={() => navigate("/classList")}
         >
           강의 목록
         </div>
         <div
-          className={`inactive ${divClassName} ${isActive(
+          className={`inactive ${isActive(
             "classRecomm"
           )}`}
           onClick={() => navigate("/classRecomm")}

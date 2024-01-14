@@ -19,7 +19,6 @@ export const Home = (): JSX.Element => {
         <div className="overlap-2">
           <Header
             className="header-instance"
-            divClassName="design-component-instance-node"
             activePage="home"
           />
           <div className="frame-wrapper">

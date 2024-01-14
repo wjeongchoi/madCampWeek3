@@ -12,7 +12,6 @@ export const ClassDetail = (): JSX.Element => {
         <Header
           className="header-instance"
           activePage="classList"
-          divClassName={undefined}
         />
         <div className="frame-3">
           <div className="frame-4">

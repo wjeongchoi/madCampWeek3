@@ -9,7 +9,7 @@ export const SignUp = (): JSX.Element => {
     return (
         <div className="sign-up">
             <div className="div-2">
-                <Header className="header-instance" divClassName={undefined}  />
+                <Header className="header-instance"  />
                 <div className="frame-2">
                     <div className="frame-3">
                         <div className="text-wrapper-5">회원가입</div>

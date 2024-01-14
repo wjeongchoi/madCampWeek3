@@ -10,7 +10,6 @@ export const ClassRecommFinal = (): JSX.Element => {
         <Header
           className="header-instance"
           activePage="classRecomm"
-          divClassName="design-component-instance-node"
         />
         <div className="frame-2">
           <div className="text-wrapper-4">~~~~~문구 들어가야 함</div>
