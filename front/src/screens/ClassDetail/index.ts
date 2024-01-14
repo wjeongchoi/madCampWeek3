@@ -1,0 +1,2 @@
+export { ClassDetail } from "./ClassDetail";
+

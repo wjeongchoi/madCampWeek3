@@ -1,0 +1,108 @@
+.class-detail {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.class-detail .div-2 {
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(215, 238, 255) 100%);
+    background-color: rgba(255, 255, 255, 1);
+    height: 832px;
+    position: relative;
+    width: 1280px;
+}
+
+.class-detail .header-instance {
+    background-color: transparent !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+}
+
+.class-detail .frame-3 {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 27px;
+    left: 49px;
+    position: absolute;
+    top: 123px;
+}
+
+.class-detail .frame-4 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 86px;
+    position: relative;
+}
+
+.class-detail .frame-5 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.class-detail .p {
+    color: #000000;
+    font-family: "Noto Sans-DisplaySemiBold", Helvetica;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: 590px;
+}
+
+.class-detail .image {
+    height: 330.32px;
+    object-fit: cover;
+    position: relative;
+    width: 590px;
+}
+
+.class-detail .text-wrapper-6 {
+    color: #868686;
+    font-family: "Noto Sans-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    height: 21px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: right;
+    white-space: nowrap;
+    width: 579px;
+}
+
+.class-detail .text-wrapper-7 {
+    color: #000000;
+    font-family: "Noto Sans-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    width: 590px;
+}
+
+.class-detail .frame-6 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 26px;
+    padding: 20px 0px;
+    position: relative;
+}
+
+.class-detail .lecture-name-box-instance {
+    position: relative !important;
+}
