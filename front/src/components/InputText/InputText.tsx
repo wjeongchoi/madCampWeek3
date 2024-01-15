@@ -3,19 +3,20 @@ import "./style.css";
 
 interface InputTextProps {
     label: string;
-    value: string; // Prop for the input value
-    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void; // Prop for the change event
+    value: string;
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    type?: 'text' | 'password'; // Optional prop to specify input type
 }
 
-export const InputText: React.FC<InputTextProps> = ({ label, value, onChange }) => {
+export const InputText: React.FC<InputTextProps> = ({ label, value, onChange, type = 'text' }) => {
     return (
         <div className="input-text">
             <input 
-                type="text" 
+                type={type} // Use the type prop here
                 value={value} 
                 onChange={onChange} 
-                placeholder={label} // Use label as the placeholder
-                className="input-field" // You can add a class for styling
+                placeholder={label} 
+                className="input-field"
             />
         </div>
     );
