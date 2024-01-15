@@ -1,0 +1,100 @@
+.answer-box {
+    align-items: flex-end;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.answer-box .frame {
+    height: 65px;
+    position: relative;
+    width: 799px;
+}
+
+.answer-box .overlap-group {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #d9d9d9;
+    border-radius: 10px;
+    height: 65px;
+    left: 48px;
+    position: absolute;
+    top: 0;
+    width: 751px;
+}
+
+.answer-box .text-wrapper {
+    color: #000000;
+    font-family: "Noto Sans-DisplaySemiBold", Helvetica;
+    font-size: 22px;
+    font-weight: 600;
+    height: 44px;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: 40px;
+    position: absolute;
+    top: 8px;
+    white-space: nowrap;
+    width: 384px;
+}
+
+.answer-box .div {
+    color: #000000;
+    font-family: "Noto Sans-DisplaySemiBold", Helvetica;
+    font-size: 22px;
+    font-weight: 600;
+    height: 40px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 40px;
+    position: absolute;
+    top: 11px;
+    white-space: nowrap;
+}
+
+.answer-box .frame-2 {
+    height: 65px;
+    position: relative;
+    width: 797px;
+}
+
+.answer-box .overlap {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #d9d9d9;
+    border-radius: 10px;
+    height: 65px;
+    left: 46px;
+    position: absolute;
+    top: 0;
+    width: 751px;
+}
+
+.answer-box .text-wrapper-2 {
+    color: #b0b0b0;
+    font-family: "Noto Sans-DisplaySemiBold", Helvetica;
+    font-size: 22px;
+    font-weight: 600;
+    height: 44px;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: 40px;
+    position: absolute;
+    top: 8px;
+    white-space: nowrap;
+    width: 384px;
+}
+
+.answer-box .text-wrapper-3 {
+    color: #000000;
+    font-family: "Noto Sans-DisplaySemiBold", Helvetica;
+    font-size: 22px;
+    font-weight: 600;
+    height: 44px;
+    letter-spacing: 0;
+    line-height: 40px;
+    position: relative;
+    white-space: nowrap;
+    width: 737px;
+}
