@@ -1,13 +1,20 @@
 import axios from "axios";
 
+const axiosInstance = axios.create({
+    withCredentials: true,
+    headers: {
+      Authorization: `Token ${process.env.REACT_APP_TOKEN}`,
+    },
+  });
+
 export const getRequest = async (
   url: string,
   handleSuccess: (arg0: any) => void,
   handleError?: (error: any) => void
 ) => {
-  console.log(`${process.env.API_URL}/${url}`);
-  await axios
-    .get(`${process.env.API_URL}/${url}`, {
+  console.log(`${process.env.REACT_APP_API_URL}/${url}`);
+  await axiosInstance
+    .get(`${process.env.REACT_APP_API_URL}/${url}`, {
       withCredentials: true,
     })
     .then((response) => handleSuccess(response.data))
@@ -27,8 +34,8 @@ export const postRequest = async (
   handleError?: (error: any) => void
 ) => {
 
-    await axios.post(
-      `${process.env.API_URL}/${url}`,
+    await axiosInstance.post(
+      `${process.env.REACT_APP_API_URL}/${url}`,
       data,
       { withCredentials: true }
     ).then((response) => {handleSuccess(response); console.log('su')})
@@ -47,9 +54,9 @@ export const putRequest = async (
   handleError?: (error: any) => void
 ) => {
   try {
-    console.log('request', `${process.env.API_URL}/${url}`);
-    const response = await axios.put(
-      `${process.env.API_URL}/${url}`,
+    console.log('request', `${process.env.REACT_APP_API_URL}/${url}`);
+    const response = await axiosInstance.put(
+      `${process.env.REACT_APP_API_URL}/${url}`,
       data,
       { withCredentials: true }
     );
@@ -69,9 +76,9 @@ export const deleteRequest = async (
   handleError?: (error: any) => void
 ) => {
   try {
-    console.log('request', `${process.env.API_URL}/${url}`);
-    const response = await axios.delete(
-      `${process.env.API_URL}/${url}`,
+    console.log('request', `${process.env.REACT_APP_API_URL}/${url}`);
+    const response = await axiosInstance.delete(
+      `${process.env.REACT_APP_API_URL}/${url}`,
       { withCredentials: true }
     );
     handleSuccess(response);
