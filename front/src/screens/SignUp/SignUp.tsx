@@ -44,12 +44,14 @@ export const SignUp: React.FC = () => {
       (response) => {
         // Handle success
         console.log("Signup successful:", response);
+        alert('회원가입 성공. 로그인하세요')
         // Redirect or show success message
         navigate("/login"); // Redirect to home or dashboard page
       },
       (error) => {
         // Handle error
         console.error("Signup failed:", error);
+        alert(error)
         // Display an error message to the user
       }
     );
