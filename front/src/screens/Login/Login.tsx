@@ -26,6 +26,7 @@ export const Login = (): JSX.Element => {
       (response) => {
         // Handle success
         console.log("Login successful:", response);
+        alert('로그인 성공');
         navigate("/"); // Redirect to home or dashboard page
       },
       (error) => {
