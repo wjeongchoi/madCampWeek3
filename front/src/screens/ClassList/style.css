@@ -28,6 +28,7 @@
   align-items: center; /* Center horizontally */
   width: 100%; /* Take full width */
   gap: 31px;
+  padding: 0 20px; /* Add horizontal padding */
 }
 
 .class-list .frame-4 {
@@ -40,30 +41,24 @@
 
 .class-list .input-text {
   background-color: #ffffff;
-  border: 1px solid;
-  border-color: #4b4a4a;
+  border: 1px solid #4b4a4a;
   border-radius: 10px;
-  height: 68px;
-  position: relative;
-  width: 837px;
+  height: 60px; /* Adjust height as needed */
+  width: 837px; /* Adjust width as needed */
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
 }
 
 .class-list .text-wrapper-6 {
   color: #b3b3b3;
   font-family: "Noto Sans-DisplaySemiBold", Helvetica;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
-  height: 30px;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 16px;
-  width: 698px;
-  text-align: left;
-}
-
-.class-list .secondary-button-instance {
-  height: 68px !important;
+  text-align: left; /* Center text horizontally */
+  width: 100%; /* Take full width of parent */
 }
 
 .class-list .design-component-instance-node {
