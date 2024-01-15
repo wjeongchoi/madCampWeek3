@@ -1,5 +1,5 @@
 .answers {
-    background-color: rgba(255, 255, 255, 1);
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(215, 238, 255) 100%);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -7,11 +7,9 @@
 }
 
 .answers .div-2 {
-    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(215, 238, 255) 100%);
-    background-color: rgba(255, 255, 255, 1);
     height: 1424px;
     position: relative;
-    width: 1280px;
+    width: 100%;
 }
 
 .answers .header-instance {
@@ -26,8 +24,7 @@
     display: inline-flex;
     flex-direction: column;
     gap: 40px;
-    left: 241px;
-    position: absolute;
+    position: relative;
     top: 144px;
 }
 
@@ -57,12 +54,6 @@
     font-family: "Noto Sans-DisplaySemiBold", Helvetica;
     font-size: 22px;
     font-weight: 600;
-    height: 59px;
-    left: 14px;
     letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 200px;
+    text-align: center; /* 텍스트 중앙 정렬 */
 }
