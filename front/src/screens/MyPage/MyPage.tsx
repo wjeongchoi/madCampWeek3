@@ -1,15 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./style.css";
 import { Header } from "../../components/Header";
 import { HorizontalLectureBox } from "../../components/HorizontalLectureBox";
 import { MyContentBox } from "../../components/MyContentBox";
 
-export const MyPage = (): JSX.Element => {
+export const MyPage: React.FC = (): JSX.Element => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const userID = localStorage.getItem("userID");
+    if (!userID) {
+      navigate("/login"); // 'userID'가 없으면 로그인 페이지로 리디렉션
+    }
+  }, [navigate]);
+
+  const handleLogout = () => {
+    localStorage.removeItem("userID");
+    navigate("/");
+  };
+
   return (
     <div className="my-page">
       <div className="div-2">
         <Header className="header-instance" />
+        <div className="logout-button-container">
+          <button onClick={handleLogout} className="logout-button">
+            로그아웃
+          </button>
+        </div>
         <div className="frame-5">
           <div className="frame-6">
             <div className="frame-7">
