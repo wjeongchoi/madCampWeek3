@@ -1,14 +1,13 @@
 import axios from "axios";
-import { API_URL } from '@env'
 
 export const getRequest = async (
   url: string,
   handleSuccess: (arg0: any) => void,
   handleError?: (error: any) => void
 ) => {
-  console.log(`${API_URL}/${url}`);
+  console.log(`${process.env.API_URL}/${url}`);
   await axios
-    .get(`${API_URL}/${url}`, {
+    .get(`${process.env.API_URL}/${url}`, {
       withCredentials: true,
     })
     .then((response) => handleSuccess(response.data))
@@ -29,7 +28,7 @@ export const postRequest = async (
 ) => {
 
     await axios.post(
-      `${API_URL}/${url}`,
+      `${process.env.API_URL}/${url}`,
       data,
       { withCredentials: true }
     ).then((response) => {handleSuccess(response); console.log('su')})
@@ -48,9 +47,9 @@ export const putRequest = async (
   handleError?: (error: any) => void
 ) => {
   try {
-    console.log('request', `${API_URL}/${url}`);
+    console.log('request', `${process.env.API_URL}/${url}`);
     const response = await axios.put(
-      `${API_URL}/${url}`,
+      `${process.env.API_URL}/${url}`,
       data,
       { withCredentials: true }
     );
@@ -70,9 +69,9 @@ export const deleteRequest = async (
   handleError?: (error: any) => void
 ) => {
   try {
-    console.log('request', `${API_URL}/${url}`);
+    console.log('request', `${process.env.API_URL}/${url}`);
     const response = await axios.delete(
-      `${API_URL}/${url}`,
+      `${process.env.API_URL}/${url}`,
       { withCredentials: true }
     );
     handleSuccess(response);
