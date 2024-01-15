@@ -3,8 +3,22 @@ import "./style.css";
 import { Header } from "../../components/Header";
 import { SecondaryButton } from "../../components/SecondaryButton";
 import { LectureBox } from "../../components/LectureBox";
+import { useNavigate } from "react-router-dom";
 
 export const ClassList = (): JSX.Element => {
+  const navigate = useNavigate();
+
+  const handleAddLectureClick = () => {
+    const userID = localStorage.getItem('userID');
+    if (!userID) {
+      alert('로그인이 필요한 서비스입니다.');
+      navigate('/login');
+    } else {
+      // 로그인한 경우, 강의 추가 로직 구현
+      // 예: navigate('/add-lecture');
+    }
+  };
+
   return (
     <div className="class-list">
       <div className="div-2">
@@ -16,7 +30,7 @@ export const ClassList = (): JSX.Element => {
                 듣고 싶은 강의를 검색해보세요
               </div>
             </div>
-            <SecondaryButton label="나만의 강의 추가하기" />
+            <SecondaryButton label="나만의 강의 추가하기" onClick={handleAddLectureClick} />
           </div>
           <div className="frame-5">
             <LectureBox

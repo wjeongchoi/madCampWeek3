@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./style.css";
@@ -9,12 +9,7 @@ import { MyContentBox } from "../../components/MyContentBox";
 export const MyPage: React.FC = (): JSX.Element => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const userID = localStorage.getItem("userID");
-    if (!userID) {
-      navigate("/login"); // 'userID'가 없으면 로그인 페이지로 리디렉션
-    }
-  }, [navigate]);
+
 
   const handleLogout = () => {
     localStorage.removeItem("userID");

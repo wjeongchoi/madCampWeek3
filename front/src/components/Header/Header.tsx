@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import { Logo } from "../Logo";
 import "./style.css";
@@ -7,14 +7,18 @@ interface Props {
   activePage?: "home" | "classList" | "classRecomm"; // Specify the possible values for activePage
 }
 
-export const Header = ({
-  className,
-  activePage,
-}: Props): JSX.Element => {
+export const Header = ({ className, activePage }: Props): JSX.Element => {
   const navigate = useNavigate();
 
-  const isActive = (pageName: string) =>
-    activePage === pageName ? "active" : "";
+  useEffect(() => {
+    const userID = localStorage.getItem("userID");
+    if (!userID && window.location.pathname === "/myPage") {
+      alert('로그인이 필요한 서비스입니다.');
+      navigate("/login");
+    }
+  }, [navigate]);
+
+  const isActive = (pageName: string) => activePage === pageName ? "active" : "";
 
   return (
     <div className={`header ${className}`}>
