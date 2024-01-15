@@ -11,11 +11,36 @@ export const Answers = (): JSX.Element => {
         <Header className="header-instance" />
         <div className="frame-4">
           <div className="frame-5">
-            <AnswerBox />
-            <AnswerBox />
-            <AnswerBox />
-            <AnswerBox />
-            <AnswerBox />
+            <AnswerBox
+              questionNumber="1"
+              questionText="What is deep learning?"
+              modelAnswer="Deep learning is a subset of machine learning..."
+              userAnswer="It's a type of machine learning..."
+            />
+            <AnswerBox
+              questionNumber="1"
+              questionText="What is deep learning?"
+              modelAnswer="Deep learning is a subset of machine learning..."
+              userAnswer="It's a type of machine learning..."
+            />
+            <AnswerBox
+              questionNumber="1"
+              questionText="What is deep learning?"
+              modelAnswer="Deep learning is a subset of machine learning..."
+              userAnswer="It's a type of machine learning..."
+            />
+            <AnswerBox
+              questionNumber="1"
+              questionText="What is deep learning?"
+              modelAnswer="Deep learning is a subset of machine learning..."
+              userAnswer="It's a type of machine learning..."
+            />
+            <AnswerBox
+              questionNumber="1"
+              questionText="What is deep learning?"
+              modelAnswer="Deep learning is a subset of machine learning..."
+              userAnswer="It's a type of machine learning..."
+            />
           </div>
           <div className="secondary-button">
             <div className="text-wrapper-7">학습 종료</div>
