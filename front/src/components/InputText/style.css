@@ -1,7 +1,6 @@
 .input-text {
     background-color: #ffffff;
-    border: 1px solid;
-    border-color: #4b4a4a;
+    border: 1px solid #4b4a4a;
     border-radius: 10px;
     height: 68px;
     display: flex;
@@ -9,15 +8,25 @@
     justify-content: flex-start;
     position: relative;
     width: 380px;
-    padding-left: 24px; /* 왼쪽 패딩 추가 */
+    padding-left: 24px; /* Left padding */
 }
 
-.input-text .text-wrapper {
-    color: #b3b3b3;
+/* Style for the input field inside .input-text */
+.input-text input {
+    border: none; /* Removes default input border */
+    outline: none; /* Removes the highlight border on focus */
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
     font-family: "Noto Sans-DisplaySemiBold", Helvetica;
     font-size: 22px;
     font-weight: 600;
-    letter-spacing: 0;
-    line-height: normal;
-    text-align: left;
+    color: #4b4a4a; /* Text color */
+    background-color: transparent; /* Transparent background */
+    padding: 0; /* No padding inside the input */
+    margin: 0; /* No margin */
+}
+
+/* Style for the placeholder of the input */
+.input-text input::placeholder {
+    color: #b3b3b3;
 }

@@ -2,13 +2,21 @@ import React from "react";
 import "./style.css";
 
 interface InputTextProps {
-    label: string; // Prop for the text label
+    label: string;
+    value: string; // Prop for the input value
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void; // Prop for the change event
 }
 
-export const InputText = ({ label }: InputTextProps): JSX.Element => {
+export const InputText: React.FC<InputTextProps> = ({ label, value, onChange }) => {
     return (
         <div className="input-text">
-            <div className="text-wrapper">{label}</div>
+            <input 
+                type="text" 
+                value={value} 
+                onChange={onChange} 
+                placeholder={label} // Use label as the placeholder
+                className="input-field" // You can add a class for styling
+            />
         </div>
     );
 };
