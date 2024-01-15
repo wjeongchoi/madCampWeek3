@@ -13,6 +13,7 @@ import { ClassDetail } from './screens/ClassDetail';
 import { Login } from './screens/Login';
 import { SignUp } from './screens/SignUp';
 import { Questions } from './screens/Questions';
+import { Answers } from './screens/Answers';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path='/questions' element={<Questions/>}/>
+          <Route path='/answers' element={<Answers/>}/>
         </Routes>
       </div>
     </Router>
