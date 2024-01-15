@@ -1,1 +1,0 @@
-export { ShowClass } from "./ShowClass";
