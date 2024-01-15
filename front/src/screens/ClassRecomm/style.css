@@ -10,9 +10,8 @@
   
   .class-recomm .div-2 {
     /* This will be the content container, we remove the background here */
-    width: 1280px; /* Fixed width or max-width if you want it to be responsive */
+    width: 100%;
     border-radius: 25px; /* Optional: if you want rounded corners */
-    /* No need for position styles */
   }
   
 .class-recomm .header-instance {
