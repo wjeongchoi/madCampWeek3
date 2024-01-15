@@ -1,20 +1,21 @@
 .lecture-box {
   background-color: #ffffff;
-  border: 1px solid;
-  border-color: #d9d9d9;
+  border: 1px solid #d9d9d9;
   border-radius: 10px;
-  height: 406px;
   width: 338px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 .lecture-box .frame {
-  align-items: flex-start;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 5px;
-  left: 21px;
-  position: relative;
-  top: 14px;
+  width: 100%;
 }
 
 .lecture-box .text-wrapper {
@@ -24,15 +25,13 @@
   font-weight: 600;
   letter-spacing: 0;
   line-height: normal;
-  margin-top: -1px;
-  position: relative;
-  width: 294px;
+  text-align: center;
+  width: 285px;
 }
 
 .lecture-box .image {
   height: 166px;
   object-fit: cover;
-  position: relative;
   width: 285px;
 }
 
@@ -41,12 +40,10 @@
   font-family: "Noto Sans-Regular", Helvetica;
   font-size: 16px;
   font-weight: 400;
-  height: 39px;
   letter-spacing: 0;
   line-height: normal;
-  position: relative;
-  text-align: right;
-  width: 280px;
+  text-align: right; /* Align date to the right */
+  width: 285px;
 }
 
 .lecture-box .text-wrapper-2 {
@@ -56,6 +53,7 @@
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
-  position: relative;
-  width: 292px;
+  text-align: left; /* Align description to the left */
+  width: 285px;
+  margin-bottom: 10px;
 }
