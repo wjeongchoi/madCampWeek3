@@ -27,6 +27,7 @@ export const Login = (): JSX.Element => {
         // Handle success
         console.log("Login successful:", response);
         alert('로그인 성공');
+        localStorage.setItem('userID', username); // 사용자 ID를 localStorage에 저장
         navigate("/"); // Redirect to home or dashboard page
       },
       (error) => {
