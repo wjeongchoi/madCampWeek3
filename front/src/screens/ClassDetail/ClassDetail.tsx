@@ -9,10 +9,7 @@ export const ClassDetail = (): JSX.Element => {
   return (
     <div className="class-detail">
       <div className="div-2">
-        <Header
-          className="header-instance"
-          activePage="classList"
-        />
+        <Header className="header-instance" activePage="classList" />{" "}
         <div className="frame-3">
           <div className="frame-4">
             <div className="frame-5">
@@ -26,27 +23,36 @@ export const ClassDetail = (): JSX.Element => {
               </div>
             </div>
             <div className="frame-6">
-              <LectureNameBox className="lecture-name-box-instance" selected />
               <LectureNameBox
-                className="lecture-name-box-instance"
-                selected={false}
+                selected={true}
+                lectureNumber="Lecture 1"
+                lectureTitle="Introduction"
               />
               <LectureNameBox
-                className="lecture-name-box-instance"
                 selected={false}
+                lectureNumber="Lecture 1"
+                lectureTitle="Introduction"
               />
               <LectureNameBox
-                className="lecture-name-box-instance"
                 selected={false}
-              />
+                lectureNumber="Lecture 1"
+                lectureTitle="Introduction"
+              />{" "}
               <LectureNameBox
-                className="lecture-name-box-instance"
                 selected={false}
-              />
+                lectureNumber="Lecture 1"
+                lectureTitle="Introduction"
+              />{" "}
               <LectureNameBox
-                className="lecture-name-box-instance"
                 selected={false}
-              />
+                lectureNumber="Lecture 1"
+                lectureTitle="Introduction"
+              />{" "}
+              <LectureNameBox
+                selected={false}
+                lectureNumber="Lecture 1"
+                lectureTitle="Introduction"
+              />{" "}
             </div>
           </div>
           <SecondaryButton label="지금 학습하기" />
