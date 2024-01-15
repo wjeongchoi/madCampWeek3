@@ -1,28 +1,26 @@
 .my-content-box {
     background-color: #ffffff;
-    border: 1px solid;
-    border-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
     border-radius: 10px;
     height: 115px;
     width: 243px;
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
 .my-content-box .frame {
-    align-items: flex-start;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    gap: 8px;
-    left: 19px;
-    position: relative;
-    top: 19px;
+    align-items: center;
+    gap: 20px;
 }
 
 .my-content-box .div {
-    align-items: center;
-    display: inline-flex;
-    flex: 0 0 auto;
-    gap: 15px;
-    position: relative;
+    display: flex;
+    align-items: center; /* Align children vertically in the center */
+    justify-content: space-between; /* Maintain the existing space-between layout */
+    width: 100%; /* Full width of the parent container */
 }
 
 .my-content-box .text-wrapper {
@@ -30,11 +28,13 @@
     font-family: "Noto Sans-DisplaySemiBold", Helvetica;
     font-size: 20px;
     font-weight: 600;
-    height: 36px;
     letter-spacing: 0;
     line-height: normal;
     position: relative;
+    text-align: left;
     width: 103px;
+    align-items: center; /* Align children vertically in the center */
+
 }
 
 .my-content-box .text-wrapper-2 {
@@ -42,13 +42,14 @@
     font-family: "Noto Sans-Regular", Helvetica;
     font-size: 16px;
     font-weight: 400;
-    height: 39px;
     letter-spacing: 0;
     line-height: normal;
     margin-top: -1px;
     position: relative;
     text-align: right;
     width: 85px;
+    align-items: center; /* Align children vertically in the center */
+
 }
 
 .my-content-box .text-wrapper-3 {
@@ -60,4 +61,6 @@
     line-height: normal;
     position: relative;
     width: 196px;
+    text-align: left; /* Align text to the left */
+    align-self: flex-start; /* Align to the start of the flex container */
 }
