@@ -56,3 +56,10 @@
   font-weight: 700;
   align-self: flex-start; /* 왼쪽 정렬 */
 }
+
+.login .signup{
+  color: #1C50B4;
+  font-size: 22px;
+  font-family: "Noto Sans";
+  font-weight: 700;
+}

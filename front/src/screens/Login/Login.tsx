@@ -18,6 +18,7 @@ export const Login = (): JSX.Element => {
               <InputText label="비밀번호" />
             </div>
             <SecondaryButton label="로그인" />
+            <div className="signup">회원가입</div>
           </div>
         </div>
       </div>
