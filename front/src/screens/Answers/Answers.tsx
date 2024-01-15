@@ -3,8 +3,14 @@ import React from "react";
 import "./style.css";
 import { Header } from "../../components/Header";
 import { AnswerBox } from "../../components/AnswerBox";
+import { useNavigate } from "react-router-dom";
 
 export const Answers = (): JSX.Element => {
+  const navigate = useNavigate(); // Create navigate function
+
+  const handleFinishLearning = () => {
+    navigate('/myPage'); // Navigate to the MyPage
+  };
   return (
     <div className="answers">
       <div className="div-2">
@@ -42,7 +48,7 @@ export const Answers = (): JSX.Element => {
               userAnswer="It's a type of machine learning..."
             />
           </div>
-          <div className="secondary-button">
+          <div className="secondary-button" onClick={handleFinishLearning}>
             <div className="text-wrapper-7">학습 종료</div>
           </div>
         </div>
