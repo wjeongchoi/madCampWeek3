@@ -1,11 +1,17 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "./style.css";
 import { Header } from "../../components/Header";
 import { InputText } from "../../components/InputText";
 import { SecondaryButton } from "../../components/SecondaryButton";
 
 export const Login = (): JSX.Element => {
+  const navigate = useNavigate(); // Create navigate function
+
+  const handleSignUpClick = () => {
+    navigate('/signUp'); // Navigate to the signUp page
+  };
+
   return (
     <div className="login">
       <div className="div-2">
@@ -18,7 +24,7 @@ export const Login = (): JSX.Element => {
               <InputText label="비밀번호" />
             </div>
             <SecondaryButton label="로그인" />
-            <div className="signup">회원가입</div>
+            <div className="signup" onClick={handleSignUpClick}>회원가입</div> 
           </div>
         </div>
       </div>
