@@ -21,8 +21,8 @@ export const LectureBox = ({
   return (
     <div className="lecture-box" onClick={onClick}>
       <div className="frame">
-        <p className="text-wrapper">{title}</p>
-        <img className="image" alt="Lecture" src="/img/image-1.png" />
+        <p className="text-wrapper">{title}</p> 
+        <img className="image" alt="Lecture image" src={imageUrl} />
         <div className="div">{date}</div> 
         <div className="text-wrapper-2">{description}</div>{" "}
       </div>
