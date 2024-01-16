@@ -135,10 +135,9 @@
 .frame-5 {
   display: flex;
   flex-wrap: nowrap; /* Prevents the items from wrapping */
-  overflow-x: scroll; /* Enables horizontal scrolling */
-  max-width: 100%; /* Ensures the container fits its parent's width */
+  overflow-x: auto; /* Enables horizontal scrolling */
+  width: 100%; /* Ensures the container fits its parent's width */
   gap: 20px; /* Adjust as needed for spacing between boxes */
-
 }
 
 

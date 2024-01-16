@@ -69,7 +69,11 @@ export const ClassDetail = (): JSX.Element => {
           <div className="frame-4">
             <div className="frame-5">
               <p className="p">{lecture.title}</p>
-              <img className="image" alt="Lecture" src={lecture.thumbnail_url} />
+              <img
+                className="image"
+                alt="Lecture"
+                src={lecture.thumbnail_url}
+              />
               <div className="text-wrapper-6">{lecture.date}</div>
               <div className="text-wrapper-7">{lecture.desc}</div>
             </div>
@@ -78,18 +82,15 @@ export const ClassDetail = (): JSX.Element => {
                 <LectureNameBox
                   key={video.video_id}
                   selected={video.video_id === selectedVideoId}
-                  lectureNumber={`Video ${video.video_id}`}
+                  lectureNumber={`Lecture ${video.video_id + 1}`}
                   lectureTitle={video.video_title}
                   onClick={() => handleLectureBoxClick(video.video_id)}
                 />
               ))}
             </div>
-            <SecondaryButton
-              label="지금 학습하기"
-              onClick={handleStudyNowClick}
-            />
           </div>
         </div>
+        <SecondaryButton label="지금 학습하기" onClick={handleStudyNowClick} />
       </div>
     </div>
   );
