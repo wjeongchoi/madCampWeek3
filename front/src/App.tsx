@@ -31,8 +31,8 @@ function App() {
           <Route path="/watchClass/:lectureId/:videoId" element={<WatchClass/>}/>
           <Route path="/login" element={<Login />} />
           <Route path="/signUp" element={<SignUp />} />
-          <Route path='/questions/:videoUrl' element={<Questions/>}/>
-          <Route path='/answers' element={<Answers/>}/>
+          <Route path='/questions/:lectureId/:videoId' element={<Questions/>}/>
+          <Route path='/answers/:lectureId/:videoId' element={<Answers/>}/>
         </Routes>
       </div>
     </Router>

@@ -1,41 +1,52 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { postRequest } from "../../axios"; // Ensure this import is correct based on your project structure
+import { useParams, useNavigate } from "react-router-dom";
+import { getRequest, postRequest } from "../../axios";
 
 import "./style.css";
 import { Header } from "../../components/Header";
 import { QuestionBox } from "../../components/QuestionBox";
-import { useNavigate } from "react-router-dom";
 
 export const Questions: React.FC = () => {
-  const [questions, setQuestions] = useState<string[]>([]);
+  // Updated the state to hold an array of objects with Question and Answer
+  const [questions, setQuestions] = useState<{ Question: string, Answer: string }[]>([]);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const navigate = useNavigate();
-  const { videoUrl } = useParams<{ videoUrl: string }>();
+  const { lectureId, videoId } = useParams<{ lectureId: string; videoId: string; }>();
 
   useEffect(() => {
-    // Fetch questions when the component mounts
-    postRequest(
-      `inference/makeqna/`,
-      { vid: videoUrl }, // Sending videoUrl as 'vid' in the request body
+    getRequest(
+      `lecture/${lectureId}/video/${videoId}/`,
       (response) => {
-        // Assuming the response data contains an array of questions
-        setQuestions(response.data.questions);
+        const videoUrl: string = response.video_url;
+        postRequest(
+          "inference/make_qna/",
+          { vid : videoUrl },
+          (response) => {
+            // Set questions with the array of question-answer pairs
+            setQuestions(response.data.message);
+          },
+          (error) => {
+            console.error("Error fetching questions:", error);
+            alert(error);
+          }
+        );
       },
       (error) => {
-        console.error("Error fetching questions:", error);
+        console.error("Error fetching video URL:", error);
         alert(error);
       }
     );
-  }, [videoUrl]);
+  }, [lectureId, videoId]);
 
   const handleAnswerChange = (questionNumber: string, answer: string) => {
     setAnswers((prevAnswers) => ({ ...prevAnswers, [questionNumber]: answer }));
   };
 
   const handleViewModelAnswers = () => {
-    navigate("/answers", { state: { userAnswers: answers } });
-  };
+    navigate(`/answers/${lectureId}/${videoId}`, {
+      state: { userAnswers: answers, questions: questions },
+    });
+  };  
 
   return (
     <div className="questions">
@@ -43,11 +54,11 @@ export const Questions: React.FC = () => {
         <Header className="header-instance" />
         <div className="frame-4">
           <div className="frame-5">
-            {questions.map((question, index) => (
+            {questions.map((item, index) => (
               <QuestionBox
                 key={index}
                 questionNumber={`${index + 1}`}
-                questionText={question}
+                questionText={item.Question}
                 onAnswerChange={handleAnswerChange}
               />
             ))}
