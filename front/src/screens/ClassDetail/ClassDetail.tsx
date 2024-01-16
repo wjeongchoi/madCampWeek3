@@ -7,6 +7,7 @@ import "./style.css";
 import { getRequest } from "../../axios";
 
 interface LectureDetail {
+  thumbnail_url: string | undefined;
   id: number;
   title: string;
   date: string;
@@ -68,7 +69,7 @@ export const ClassDetail = (): JSX.Element => {
           <div className="frame-4">
             <div className="frame-5">
               <p className="p">{lecture.title}</p>
-              <img className="image" alt="Lecture" src="/img/image-1.png" />
+              <img className="image" alt="Lecture" src={lecture.thumbnail_url} />
               <div className="text-wrapper-6">{lecture.date}</div>
               <div className="text-wrapper-7">{lecture.desc}</div>
             </div>
