@@ -35,12 +35,11 @@ export const Home = (): JSX.Element => {
             </p>
           </div>
           <div className="frame-5">
+            <SmallLectureBox lectureId={"0"} />
             <SmallLectureBox lectureId={"1"} />
             <SmallLectureBox lectureId={"3"} />
-            <SmallLectureBox lectureId={"7"} />
             <SmallLectureBox lectureId={"5"} />
             <SmallLectureBox lectureId={"4"} />
-
           </div>
         </div>
         <div className="frame-3">
