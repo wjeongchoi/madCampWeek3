@@ -5,6 +5,7 @@ import { Header } from "../../components/Header";
 import { PrimaryButton } from "../../components/PrimaryButton";
 import { SecondaryButton } from "../../components/SecondaryButton";
 import { getRequest } from "../../axios";
+import "./style.css";
 
 interface VideoData {
   video_url: string;
@@ -51,9 +52,6 @@ export const WatchClass: React.FC = () => {
             <div className="video">
               <YouTube
                 videoId={videoUrl}
-                opts={{
-                  width: "100%",
-                }}
               />
             </div>
             <div className="videoinfos">
@@ -61,9 +59,7 @@ export const WatchClass: React.FC = () => {
                 <div className="text-wrapper-4">
                   Lecture {Number(videoId) + 1} {/* Display lecture number */}
                 </div>
-                <p className="p">
-                  {videoTitle} {/* Display video title */}
-                </p>
+                <p className="p">{videoTitle}</p>
               </div>
               <div className="frame-3">
                 <PrimaryButton label="요약본 만들기" />
