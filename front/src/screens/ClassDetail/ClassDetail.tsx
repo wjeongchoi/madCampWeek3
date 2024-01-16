@@ -44,10 +44,8 @@ export const ClassDetail = (): JSX.Element => {
   const handleStudyNowClick = () => {
     const userID = localStorage.getItem("userID");
     if (userID && selectedVideoId !== null) {
-      const selectedVideo = videos.find(
-        (video) => video.video_id === selectedVideoId
-      );
-      navigate(`/watchClass/${selectedVideo?.video_url}`);
+      // Navigate to the new path with lectureId and selectedVideoId
+      navigate(`/watchClass/${lectureId}/${selectedVideoId}`);
     } else {
       alert("로그인이 필요한 서비스입니다.");
       navigate("/login");

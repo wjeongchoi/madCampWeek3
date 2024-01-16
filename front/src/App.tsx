@@ -28,7 +28,7 @@ function App() {
           <Route path="/classRecommFinal" element={<ClassRecommFinal />} />
           <Route path="/classRecommResult" element={<ClassRecommResult />} />
           <Route path="/classDetail/:lectureId" element={<ClassDetail />} />
-          <Route path="/watchClass/:videoUrl" element={<WatchClass />} />
+          <Route path="/watchClass/:lectureId/:videoId" element={<WatchClass/>}/>
           <Route path="/login" element={<Login />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path='/questions/:videoUrl' element={<Questions/>}/>

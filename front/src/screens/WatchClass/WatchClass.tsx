@@ -1,19 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import YouTube from "react-youtube";
 import { Header } from "../../components/Header";
 import { PrimaryButton } from "../../components/PrimaryButton";
 import { SecondaryButton } from "../../components/SecondaryButton";
+import { getRequest } from "../../axios";
+
+interface VideoData {
+  video_url: string;
+  video_title: string;
+}
 
 export const WatchClass: React.FC = () => {
-  const { videoUrl } = useParams<{ videoUrl: string }>();
+  const { lectureId, videoId } = useParams<{
+    lectureId: string;
+    videoId: string;
+  }>();
   const navigate = useNavigate();
-  const [title, setTitle] = useState<string>(""); // Type specified as string
-  const [notes, setNotes] = useState<string>(""); // Type specified as string
+  const [videoUrl, setVideoUrl] = useState<string>("");
+  const [title, setTitle] = useState<string>("");
+  const [notes, setNotes] = useState<string>("");
+  const [videoTitle, setVideoTitle] = useState<string>("");
 
-  // Event handler for the "End Study" button
+  useEffect(() => {
+    if (lectureId && videoId) {
+      getRequest(
+        `lecture/${lectureId}/video/${videoId}/`,
+        (data: VideoData) => {
+          setVideoUrl(data.video_url);
+          setVideoTitle(data.video_title); // Set the video title
+        },
+        (error: any) => {
+          console.error("Error fetching video data:", error);
+          alert(error);
+        }
+      );
+    }
+  }, [lectureId, videoId]);
+
   const handleEndStudyClick = () => {
-    navigate(`/questions/${videoUrl}`);
+    navigate(`/questions/${lectureId}/${videoId}`);
   };
 
   return (
@@ -24,7 +50,7 @@ export const WatchClass: React.FC = () => {
           <div className="video-column">
             <div className="video">
               <YouTube
-                videoId={videoUrl} // Use videoUrl here
+                videoId={videoUrl}
                 opts={{
                   width: "100%",
                 }}
@@ -32,9 +58,11 @@ export const WatchClass: React.FC = () => {
             </div>
             <div className="videoinfos">
               <div className="frame-2">
-                <div className="text-wrapper-4">Lecture 0</div>
+                <div className="text-wrapper-4">
+                  Lecture {Number(videoId) + 1} {/* Display lecture number */}
+                </div>
                 <p className="p">
-                  Convolutional Neural Networks for Visual Recognition
+                  {videoTitle} {/* Display video title */}
                 </p>
               </div>
               <div className="frame-3">
@@ -43,8 +71,7 @@ export const WatchClass: React.FC = () => {
                 <SecondaryButton
                   label="학습 종료하기"
                   onClick={handleEndStudyClick}
-                />{" "}
-                {/* Add onClick event to the button */}
+                />
               </div>
             </div>
           </div>
