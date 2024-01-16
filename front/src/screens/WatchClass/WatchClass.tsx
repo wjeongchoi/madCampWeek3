@@ -22,6 +22,7 @@ export const WatchClass: React.FC = () => {
   const [title, setTitle] = useState<string>("");
   const [notes, setNotes] = useState<string>("");
   const [videoTitle, setVideoTitle] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
     if (lectureId && videoId) {
@@ -44,6 +45,7 @@ export const WatchClass: React.FC = () => {
   };
 
   const handleGenerateSummary = async () => {
+    setIsLoading(true); // Start loading
     const requestData = { vid: videoUrl }; // Use videoUrl for the request
 
     const handleSuccess = (response: any) => {
@@ -63,6 +65,7 @@ export const WatchClass: React.FC = () => {
       handleSuccess,
       handleError
     );
+    setIsLoading(false); // Stop loading
   };
 
   const handleSaveNotes = async () => {
@@ -94,6 +97,7 @@ export const WatchClass: React.FC = () => {
   return (
     <div className="watch-class">
       <div className="div-2">
+        {isLoading && <div className="loading-indicator">요약본 생성중...</div>}
         <Header className="header-instance" />
         <div className="row">
           <div className="video-column">
