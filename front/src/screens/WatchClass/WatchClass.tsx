@@ -49,7 +49,7 @@ export const WatchClass: React.FC = () => {
     const handleSuccess = (response: any) => {
       const summary = response.data.summary; // Assuming the response contains a 'summary' field
       setNotes((prevNotes) => `${prevNotes}\n\n${summary}`); // Append summary to existing notes
-      alert('요약본이 필기에 추가되었습니다');
+      alert("요약본이 필기에 추가되었습니다");
     };
 
     const handleError = (error: any) => {
@@ -57,7 +57,38 @@ export const WatchClass: React.FC = () => {
       alert(error);
     };
 
-    await postRequest("inference/make_summary/", requestData, handleSuccess, handleError);
+    await postRequest(
+      "inference/make_summary/",
+      requestData,
+      handleSuccess,
+      handleError
+    );
+  };
+
+  const handleSaveNotes = async () => {
+    const userId = localStorage.getItem("userID");
+
+    const requestData = {
+      video_id: videoId,
+      title: title,
+      memo: notes,
+    };
+
+    const handleSuccess = (response: any) => {
+      alert("자료가 성공적으로 저장되었습니다.");
+    };
+
+    const handleError = (error: any) => {
+      console.error("Error saving notes:", error);
+      alert(error);
+    };
+
+    await postRequest(
+      `lecture/save-notes/${userId}/${lectureId}/`,
+      requestData,
+      handleSuccess,
+      handleError
+    );
   };
 
   return (
@@ -81,7 +112,10 @@ export const WatchClass: React.FC = () => {
                   label="요약본 만들기"
                   onClick={handleGenerateSummary}
                 />
-                <PrimaryButton label="자료 저장하기" />
+                <PrimaryButton
+                  label="필기 저장하기"
+                  onClick={handleSaveNotes}
+                />
                 <SecondaryButton
                   label="학습 종료하기"
                   onClick={handleEndStudyClick}
@@ -103,7 +137,7 @@ export const WatchClass: React.FC = () => {
                 className="notes-textarea"
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
-                placeholder="필기 내용을 여기에 작성하세요 (Markdown 형식 지원)" // Placeholder for the notes
+                placeholder="강의를 들으며 필기를 남겨보세요" // Placeholder for the notes
                 rows={10} // Adjust the number of rows as needed
               />
             </div>
