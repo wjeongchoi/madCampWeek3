@@ -58,6 +58,7 @@
   width: 285px;
   margin-bottom: 10px;
   max-height: 200px;
+  min-height: 200px;
   overflow-y: auto; /* Enable vertical scrolling */
   white-space: normal; /* Ensure text wraps normally */
 }
