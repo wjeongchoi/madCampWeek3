@@ -17,10 +17,7 @@ export const Home = (): JSX.Element => {
     <div className="home">
       <div className="div-2">
         <div className="overlap-2">
-          <Header
-            className="header-instance"
-            activePage="home"
-          />
+          <Header className="header-instance" activePage="home" />
           <div className="frame-wrapper">
             <div className="frame-2">
               <div className="div-wrapper">
@@ -38,26 +35,12 @@ export const Home = (): JSX.Element => {
             </p>
           </div>
           <div className="frame-5">
-            <SmallLectureBox
-              text="[CS000] Convolutional Neural Networks for Visual Recognition"
-              imageUrl="img/image-1.png"
-            />
-            <SmallLectureBox
-              text="[CS000] Convolutional Neural Networks for Visual Recognition"
-              imageUrl="img/image-1.png"
-            />
-            <SmallLectureBox
-              text="[CS000] Convolutional Neural Networks for Visual Recognition"
-              imageUrl="img/image-1.png"
-            />
-            <SmallLectureBox
-              text="[CS000] Convolutional Neural Networks for Visual Recognition"
-              imageUrl="img/image-1.png"
-            />
-            <SmallLectureBox
-              text="[CS000] Convolutional Neural Networks for Visual Recognition"
-              imageUrl="img/image-1.png"
-            />
+            <SmallLectureBox lectureId={"1"} />
+            <SmallLectureBox lectureId={"3"} />
+            <SmallLectureBox lectureId={"7"} />
+            <SmallLectureBox lectureId={"5"} />
+            <SmallLectureBox lectureId={"4"} />
+
           </div>
         </div>
         <div className="frame-3">
