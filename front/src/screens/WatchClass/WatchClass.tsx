@@ -4,9 +4,10 @@ import { Header } from "../../components/Header";
 import { PrimaryButton } from "../../components/PrimaryButton";
 import { SecondaryButton } from "../../components/SecondaryButton";
 import YouTube from "react-youtube";
+import { useParams } from "react-router-dom";
 
 export const WatchClass = (): JSX.Element => {
-  const videoId = "vT1JzLTH4G4";
+  const { videoUrl } = useParams<{ videoUrl: string }>(); // Use useParams to get videoUrl
   return (
     <div className="watch-class">
       <div className="div-2">
@@ -14,8 +15,8 @@ export const WatchClass = (): JSX.Element => {
         <div className="row">
           <div className="video-column">
             <div className="video">
-              <YouTube
-                videoId={videoId}
+            <YouTube
+                videoId={videoUrl} // Use videoUrl here
                 opts={{
                   width: "100%",
                 }}
