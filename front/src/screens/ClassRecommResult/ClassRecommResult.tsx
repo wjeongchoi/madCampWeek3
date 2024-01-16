@@ -2,8 +2,16 @@ import React from "react";
 import "./style.css";
 import { Header } from "../../components/Header";
 import { LectureBox } from "../../components/LectureBox";
+import { useNavigate } from "react-router-dom";
 
 export const ClassRecommResult = (): JSX.Element => {
+  const navigate = useNavigate();
+
+  const navigateToClassDetail = (lectureId: number) => {
+    navigate(`/classDetail/${lectureId}`); // Assuming you have a route like this
+  };
+
+
   return (
     <div className="class-recomm-result">
       <div className="div-2">
@@ -26,18 +34,23 @@ export const ClassRecommResult = (): JSX.Element => {
               description="Learn the basics of programming with Python..."
               imageUrl="/img/image-1.png"
               date="2024-02-01"
+              onClick={() => navigateToClassDetail(0)}
+              />
+            <LectureBox
+              title="[CS101] Introduction to Programming"
+              description="Learn the basics of programming with Python..."
+              imageUrl="/img/image-1.png"
+              date="2024-02-01"
+              onClick={() => navigateToClassDetail(0)}
+
             />
             <LectureBox
               title="[CS101] Introduction to Programming"
               description="Learn the basics of programming with Python..."
               imageUrl="/img/image-1.png"
               date="2024-02-01"
-            />
-            <LectureBox
-              title="[CS101] Introduction to Programming"
-              description="Learn the basics of programming with Python..."
-              imageUrl="/img/image-1.png"
-              date="2024-02-01"
+              onClick={() => navigateToClassDetail(0)}
+
             />
           </div>
         </div>
