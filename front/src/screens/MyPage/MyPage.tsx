@@ -16,9 +16,19 @@ interface Lecture {
   date: string;
 }
 
+// Define an interface for lecture notes data
+interface LectureNote {
+  vid: number;
+  title: string;
+  date: string;
+  resourceTitle: string;
+}
+
 export const MyPage: React.FC = (): JSX.Element => {
   const [selectedLecture, setSelectedLecture] = useState<number | null>(null);
   const [lectures, setLectures] = useState<Lecture[]>([]); // Use the Lecture interface for typing
+  const [lectureNotes, setLectureNotes] = useState<LectureNote[]>([]);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -37,13 +47,27 @@ export const MyPage: React.FC = (): JSX.Element => {
     }
   }, []);
 
+  // Fetch lecture notes when a lecture is selected
+  const selectLecture = (lectureId: number) => {
+    setSelectedLecture(lectureId);
+    const userId = localStorage.getItem("userID");
+    if (userId) {
+      getRequest(
+        `lecture/notes/${userId}/${lectureId}/`,
+        (data: LectureNote[]) => {
+          setLectureNotes(data);
+        },
+        (error) => {
+          console.error("Error fetching lecture notes:", error);
+          alert(error);
+        }
+      );
+    }
+  };
+
   const handleLogout = () => {
     localStorage.removeItem("userID");
     navigate("/");
-  };
-
-  const selectLecture = (lectureId: number) => {
-    setSelectedLecture(lectureId);
   };
 
   return (
@@ -73,46 +97,14 @@ export const MyPage: React.FC = (): JSX.Element => {
           <div className="frame-8">
             <div className="text-wrapper-9">내 학습 자료</div>
             <div className="frame-9">
-              <MyContentBox
-                lectureTitle="Lecture 0"
-                date="2024-01-14"
-                resourceTitle="수업 필기"
-              />
-              <MyContentBox
-                lectureTitle="Lecture 0"
-                date="2024-01-14"
-                resourceTitle="수업 필기"
-              />
-              <MyContentBox
-                lectureTitle="Lecture 0"
-                date="2024-01-14"
-                resourceTitle="수업 필기"
-              />
-              <MyContentBox
-                lectureTitle="Lecture 0"
-                date="2024-01-14"
-                resourceTitle="수업 필기"
-              />
-              <MyContentBox
-                lectureTitle="Lecture 0"
-                date="2024-01-14"
-                resourceTitle="수업 필기"
-              />
-              <MyContentBox
-                lectureTitle="Lecture 0"
-                date="2024-01-14"
-                resourceTitle="수업 필기"
-              />
-              <MyContentBox
-                lectureTitle="Lecture 0"
-                date="2024-01-14"
-                resourceTitle="수업 필기"
-              />
-              <MyContentBox
-                lectureTitle="Lecture 0"
-                date="2024-01-14"
-                resourceTitle="수업 필기"
-              />
+              {lectureNotes.map((note) => (
+                <MyContentBox
+                  key={note.vid}
+                  lectureTitle={`Lecture ${Number(note.vid) + 1}`} // Convert note.vid to a number before adding 1
+                  date={note.date}
+                  resourceTitle={note.title}
+                />
+              ))}
             </div>
           </div>
         </div>
