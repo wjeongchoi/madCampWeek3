@@ -89,8 +89,11 @@ export const ClassDetail = (): JSX.Element => {
               ))}
             </div>
           </div>
+          <SecondaryButton
+            label="지금 학습하기"
+            onClick={handleStudyNowClick}
+          />
         </div>
-        <SecondaryButton label="지금 학습하기" onClick={handleStudyNowClick} />
       </div>
     </div>
   );
