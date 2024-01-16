@@ -43,12 +43,16 @@ export const ClassDetail = (): JSX.Element => {
 
   const handleStudyNowClick = () => {
     const userID = localStorage.getItem("userID");
-    if (userID && selectedVideoId !== null) {
-      // Navigate to the new path with lectureId and selectedVideoId
-      navigate(`/watchClass/${lectureId}/${selectedVideoId}`);
-    } else {
+    if (!userID) {
+      // Alert the user if userID is not found (user is not logged in)
       alert("로그인이 필요한 서비스입니다.");
       navigate("/login");
+    } else if (selectedVideoId === null) {
+      // Alert the user if selectedVideoId is not set
+      alert("학습할 영상을 선택하세요.");
+    } else {
+      // Navigate to the new path with lectureId and selectedVideoId
+      navigate(`/watchClass/${lectureId}/${selectedVideoId}`);
     }
   };
 
