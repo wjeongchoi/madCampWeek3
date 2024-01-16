@@ -24,35 +24,42 @@ export const ClassDetail = (): JSX.Element => {
   const { lectureId } = useParams<{ lectureId: string }>();
   const [lecture, setLecture] = useState<LectureDetail | null>(null);
   const [videos, setVideos] = useState<VideoDetail[]>([]);
+  const [selectedVideoId, setSelectedVideoId] = useState<number | null>(null);
 
   useEffect(() => {
     getRequest(
       `lecture/${lectureId}/`,
       (data: LectureDetail) => setLecture(data),
-      (error: any) => console.error('Error fetching lecture details:', error)
+      (error: any) => console.error("Error fetching lecture details:", error)
     );
 
     getRequest(
       `lecture/${lectureId}/videos/`,
       (data: VideoDetail[]) => setVideos(data),
-      (error: any) => console.error('Error fetching video details:', error)
+      (error: any) => console.error("Error fetching video details:", error)
     );
   }, [lectureId]);
 
   const handleStudyNowClick = () => {
-    const userID = localStorage.getItem('userID');
-    if (userID) {
-      // navigate to study page
+    const userID = localStorage.getItem("userID");
+    if (userID && selectedVideoId !== null) {
+      const selectedVideo = videos.find(
+        (video) => video.video_id === selectedVideoId
+      );
+      navigate(`/watchClass/${selectedVideo?.video_url}`);
     } else {
-      alert('로그인이 필요한 서비스입니다.');
-      navigate('/login');
+      alert("로그인이 필요한 서비스입니다.");
+      navigate("/login");
     }
+  };
+
+  const handleLectureBoxClick = (videoId: number) => {
+    setSelectedVideoId(videoId);
   };
 
   if (!lecture) {
     return <div>Loading...</div>;
   }
-
   return (
     <div className="class-detail">
       <div className="div-2">
@@ -69,14 +76,18 @@ export const ClassDetail = (): JSX.Element => {
               {videos.map((video) => (
                 <LectureNameBox
                   key={video.video_id}
-                  selected={false}
+                  selected={video.video_id === selectedVideoId}
                   lectureNumber={`Video ${video.video_id}`}
                   lectureTitle={video.video_title}
+                  onClick={() => handleLectureBoxClick(video.video_id)}
                 />
               ))}
             </div>
+            <SecondaryButton
+              label="지금 학습하기"
+              onClick={handleStudyNowClick}
+            />
           </div>
-          <SecondaryButton label="지금 학습하기" onClick={handleStudyNowClick} />
         </div>
       </div>
     </div>
