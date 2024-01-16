@@ -21,12 +21,10 @@ export const LectureBox = ({
   return (
     <div className="lecture-box" onClick={onClick}>
       <div className="frame">
-        <p className="text-wrapper">{title}</p> {/* Use title prop */}
-        <img className="image" alt="Lecture image" src={imageUrl} />{" "}
-        {/* Use imageUrl prop */}
-        <div className="div">{date}</div> {/* Use date prop */}
+        <p className="text-wrapper">{title}</p>
+        <img className="image" alt="Lecture" src="/img/image-1.png" />
+        <div className="div">{date}</div> 
         <div className="text-wrapper-2">{description}</div>{" "}
-        {/* Use description prop */}
       </div>
     </div>
   );

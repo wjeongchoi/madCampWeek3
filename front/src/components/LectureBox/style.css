@@ -2,7 +2,7 @@
   background-color: #ffffff;
   border: 1px solid #d9d9d9;
   border-radius: 10px;
-  width: 338px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,13 +26,14 @@
   letter-spacing: 0;
   line-height: normal;
   text-align: center;
-  width: 285px;
+  width: 350px;
+  min-height: 70px;
 }
 
 .lecture-box .image {
-  height: 166px;
+  height: 180px;
   object-fit: cover;
-  width: 285px;
+  width: 300px;
 }
 
 .lecture-box .div {
@@ -56,4 +57,7 @@
   text-align: left; /* Align description to the left */
   width: 285px;
   margin-bottom: 10px;
+  max-height: 200px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  white-space: normal; /* Ensure text wraps normally */
 }
