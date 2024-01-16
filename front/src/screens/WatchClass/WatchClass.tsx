@@ -4,10 +4,16 @@ import { Header } from "../../components/Header";
 import { PrimaryButton } from "../../components/PrimaryButton";
 import { SecondaryButton } from "../../components/SecondaryButton";
 import YouTube from "react-youtube";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export const WatchClass = (): JSX.Element => {
-  const { videoUrl } = useParams<{ videoUrl: string }>(); // Use useParams to get videoUrl
+  const { videoUrl } = useParams<{ videoUrl: string }>();
+  const navigate = useNavigate(); // Create navigate function
+
+  // Event handler for the "End Study" button
+  const handleEndStudyClick = () => {
+    navigate(`/questions/${videoUrl}`); // Navigate to /questions/{videoUrl}
+  };
   return (
     <div className="watch-class">
       <div className="div-2">
@@ -32,7 +38,7 @@ export const WatchClass = (): JSX.Element => {
               <div className="frame-3">
                 <PrimaryButton label="요약본 만들기" />
                 <PrimaryButton label="자료 저장하기" />
-                <SecondaryButton label="학습 종료하기" />
+                <SecondaryButton label="학습 종료하기" onClick={handleEndStudyClick} /> {/* Add onClick event to the button */}
               </div>
             </div>
           </div>

@@ -31,7 +31,7 @@ function App() {
           <Route path="/watchClass/:videoUrl" element={<WatchClass />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signUp" element={<SignUp />} />
-          <Route path='/questions' element={<Questions/>}/>
+          <Route path='/questions/:videoUrl' element={<Questions/>}/>
           <Route path='/answers' element={<Answers/>}/>
         </Routes>
       </div>
