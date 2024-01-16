@@ -1,72 +1,79 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-
-import "./style.css";
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { SecondaryButton } from "../../components/SecondaryButton";
 import { LectureNameBox } from "../../components/LectureNameBox/LectureNameBox";
+import "./style.css";
+import { getRequest } from "../../axios";
+
+interface LectureDetail {
+  id: number;
+  title: string;
+  date: string;
+  desc: string;
+}
+
+interface VideoDetail {
+  video_id: number;
+  video_url: string;
+  video_title: string;
+}
 
 export const ClassDetail = (): JSX.Element => {
   const navigate = useNavigate();
+  const { lectureId } = useParams<{ lectureId: string }>();
+  const [lecture, setLecture] = useState<LectureDetail | null>(null);
+  const [videos, setVideos] = useState<VideoDetail[]>([]);
+
+  useEffect(() => {
+    getRequest(
+      `lecture/${lectureId}/`,
+      (data: LectureDetail) => setLecture(data),
+      (error: any) => console.error('Error fetching lecture details:', error)
+    );
+
+    getRequest(
+      `lecture/${lectureId}/videos/`,
+      (data: VideoDetail[]) => setVideos(data),
+      (error: any) => console.error('Error fetching video details:', error)
+    );
+  }, [lectureId]);
 
   const handleStudyNowClick = () => {
     const userID = localStorage.getItem('userID');
     if (userID) {
-      // 사용자가 로그인한 경우의 로직 (예: 학습 페이지로 이동)
-      // navigate('/learning-page'); // 예시
+      // navigate to study page
     } else {
-      // 로그인하지 않은 경우 로그인 페이지로 
       alert('로그인이 필요한 서비스입니다.');
       navigate('/login');
     }
   };
+
+  if (!lecture) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="class-detail">
       <div className="div-2">
-        <Header className="header-instance" activePage="classList" />{" "}
+        <Header className="header-instance" activePage="classList" />
         <div className="frame-3">
           <div className="frame-4">
             <div className="frame-5">
-              <p className="p">
-                [CS000] Convolutional Neural Networks for Visual Recognition
-              </p>
-              <img className="image" alt="Image" src="img/image-1.png" />
-              <div className="text-wrapper-6">2024-01-14</div>
-              <div className="text-wrapper-7">
-                설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명
-              </div>
+              <p className="p">{lecture.title}</p>
+              <img className="image" alt="Lecture" src="/img/image-1.png" />
+              <div className="text-wrapper-6">{lecture.date}</div>
+              <div className="text-wrapper-7">{lecture.desc}</div>
             </div>
             <div className="frame-6">
-              <LectureNameBox
-                selected={true}
-                lectureNumber="Lecture 1"
-                lectureTitle="Introduction"
-              />
-              <LectureNameBox
-                selected={false}
-                lectureNumber="Lecture 1"
-                lectureTitle="Introduction"
-              />
-              <LectureNameBox
-                selected={false}
-                lectureNumber="Lecture 1"
-                lectureTitle="Introduction"
-              />{" "}
-              <LectureNameBox
-                selected={false}
-                lectureNumber="Lecture 1"
-                lectureTitle="Introduction"
-              />{" "}
-              <LectureNameBox
-                selected={false}
-                lectureNumber="Lecture 1"
-                lectureTitle="Introduction"
-              />{" "}
-              <LectureNameBox
-                selected={false}
-                lectureNumber="Lecture 1"
-                lectureTitle="Introduction"
-              />{" "}
+              {videos.map((video) => (
+                <LectureNameBox
+                  key={video.video_id}
+                  selected={false}
+                  lectureNumber={`Video ${video.video_id}`}
+                  lectureTitle={video.video_title}
+                />
+              ))}
             </div>
           </div>
           <SecondaryButton label="지금 학습하기" onClick={handleStudyNowClick} />
