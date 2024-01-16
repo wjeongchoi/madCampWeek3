@@ -26,6 +26,7 @@
 
 .my-page .frame-5 {
   display: flex; /* Enable flexbox */
+  flex-direction: row;
   width: 100%; /* Full width of the parent container */
   gap: 57px; /* Adjust gap if necessary */
   padding: 0 33px; /* Add padding to sides if needed */
@@ -36,20 +37,21 @@
 
 .my-page .frame-6 {
   height: 665px;
+  flex-direction: column;
+  gap: 10px;
   position: relative;
-  width: 50%; /* Each takes up 50% of the width */
+  width: 60%; /* Each takes up 50% of the width */
   overflow-y: auto; /* Enable vertical scrolling */
   max-height: calc(100vh - 120px); /* Adjust height based on header and any additional padding/margin */
 }
 
 .my-page .frame-7 {
   align-items: flex-start;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  gap: 25px;
-  left: 6px;
-  position: absolute;
-  top: 64px;
+  gap: 20px;
+  top: 10px;
+  position: relative;
 }
 
 .my-page .design-component-instance-node {
@@ -76,9 +78,9 @@
   display: inline-flex;
   flex: 0 0 auto;
   flex-direction: column;
-  gap: 9px;
+  gap: 10px;
   position: relative;
-  width: 50%; /* Each takes up 50% of the width */
+  width: 40%; /* Each takes up 50% of the width */
   overflow-y: auto; /* Enable vertical scrolling */
   max-height: calc(100vh - 120px); /* Adjust height based on header and any additional padding/margin */
 
@@ -91,8 +93,9 @@
   flex-wrap: wrap;
   gap: 15px 15px;
   position: relative;
-  width: 501px;
+  width: 100%;
 }
+
 .logout-button-container {
   position: absolute;
   left: calc(100% - 170px); /* headeroverlap의 왼쪽에 위치 */
