@@ -22,12 +22,14 @@ interface LectureNote {
   title: string;
   date: string;
   resourceTitle: string;
+  memo: string;
 }
 
 export const MyPage: React.FC = (): JSX.Element => {
   const [selectedLecture, setSelectedLecture] = useState<number | null>(null);
   const [lectures, setLectures] = useState<Lecture[]>([]); // Use the Lecture interface for typing
   const [lectureNotes, setLectureNotes] = useState<LectureNote[]>([]);
+  const [selectedNoteMemo, setSelectedNoteMemo] = useState<string>("");
 
   const navigate = useNavigate();
 
@@ -65,6 +67,10 @@ export const MyPage: React.FC = (): JSX.Element => {
     }
   };
 
+  const handleContentBoxClick = (memo: string) => {
+    setSelectedNoteMemo(memo);
+  };
+
   const handleLogout = () => {
     localStorage.removeItem("userID");
     navigate("/");
@@ -100,11 +106,17 @@ export const MyPage: React.FC = (): JSX.Element => {
               {lectureNotes.map((note) => (
                 <MyContentBox
                   key={note.vid}
-                  lectureTitle={`Lecture ${Number(note.vid) + 1}`} // Convert note.vid to a number before adding 1
+                  lectureTitle={`Lecture ${Number(note.vid) + 1}`}
                   date={note.date}
                   resourceTitle={note.title}
+                  onClick={() => handleContentBoxClick(note.memo)} // Assuming note includes a memo field
                 />
               ))}
+              {selectedNoteMemo && (
+                <div className="selected-note-memo">
+                  <p>{selectedNoteMemo}</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
