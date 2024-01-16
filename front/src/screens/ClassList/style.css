@@ -68,11 +68,13 @@
 .class-list .frame-5 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center horizontally */
+  justify-content: flex-start; /* Align items to start from the left */
   align-items: flex-start;
-  width: 100%; /* Take full width */
+  width: fit-content; /* Fit to the content width */
   gap: 40px;
   margin-bottom: 40px;
+  margin-left: 4rem; /* Center the frame horizontally */
+  margin-right: 4rem; /* Center the frame horizontally */
 }
 
 .class-list .lecture-box-instance {
