@@ -19,7 +19,7 @@
     border-radius: 10px;
     height: 65px;
     left: 48px;
-    position: absolute;
+    position: relative;
     top: 0;
     width: 751px;
 }
@@ -30,10 +30,9 @@
     font-size: 22px;
     font-weight: 600;
     height: 44px;
-    left: 13px;
     letter-spacing: 0;
     line-height: 40px;
-    position: absolute;
+    position: relative;
     top: 8px;
     white-space: nowrap;
     width: 384px;
@@ -65,8 +64,7 @@
     border-color: #d9d9d9;
     border-radius: 10px;
     height: 65px;
-    left: 46px;
-    position: absolute;
+    position: relative;
     top: 0;
     width: 751px;
 }
@@ -77,11 +75,28 @@
     font-size: 22px;
     font-weight: 600;
     height: 44px;
-    left: 13px;
     letter-spacing: 0;
     line-height: 40px;
-    position: absolute;
+    position: relative;
     top: 8px;
     white-space: nowrap;
     width: 384px;
 }
+.question-box .input-answer {
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    color: #b0b0b0;
+    font-family: "Noto Sans", Helvetica;
+    font-weight: 700;
+    font-size: 22px;
+    height: 65px;
+    letter-spacing: 0;
+    line-height: 40px;
+    padding: 12px;
+    position: absolute;
+    top: 0;
+    left: 46px;
+    width: 751px;
+  }
+  
