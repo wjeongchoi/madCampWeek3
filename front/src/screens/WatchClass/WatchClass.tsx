@@ -4,7 +4,7 @@ import YouTube from "react-youtube";
 import { Header } from "../../components/Header";
 import { PrimaryButton } from "../../components/PrimaryButton";
 import { SecondaryButton } from "../../components/SecondaryButton";
-import { getRequest } from "../../axios";
+import { getRequest, postRequest } from "../../axios";
 import "./style.css";
 
 interface VideoData {
@@ -43,6 +43,23 @@ export const WatchClass: React.FC = () => {
     navigate(`/questions/${lectureId}/${videoId}`);
   };
 
+  const handleGenerateSummary = async () => {
+    const requestData = { vid: videoUrl }; // Use videoUrl for the request
+
+    const handleSuccess = (response: any) => {
+      const summary = response.data.summary; // Assuming the response contains a 'summary' field
+      setNotes((prevNotes) => `${prevNotes}\n\n${summary}`); // Append summary to existing notes
+      alert('요약본이 필기에 추가되었습니다');
+    };
+
+    const handleError = (error: any) => {
+      console.error("Error generating summary:", error);
+      alert(error);
+    };
+
+    await postRequest("inference/make_summary/", requestData, handleSuccess, handleError);
+  };
+
   return (
     <div className="watch-class">
       <div className="div-2">
@@ -50,9 +67,7 @@ export const WatchClass: React.FC = () => {
         <div className="row">
           <div className="video-column">
             <div className="video">
-              <YouTube
-                videoId={videoUrl}
-              />
+              <YouTube videoId={videoUrl} />
             </div>
             <div className="videoinfos">
               <div className="frame-2">
@@ -62,7 +77,10 @@ export const WatchClass: React.FC = () => {
                 <p className="p">{videoTitle}</p>
               </div>
               <div className="frame-3">
-                <PrimaryButton label="요약본 만들기" />
+                <PrimaryButton
+                  label="요약본 만들기"
+                  onClick={handleGenerateSummary}
+                />
                 <PrimaryButton label="자료 저장하기" />
                 <SecondaryButton
                   label="학습 종료하기"
