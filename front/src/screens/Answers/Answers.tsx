@@ -3,13 +3,20 @@ import React from "react";
 import "./style.css";
 import { Header } from "../../components/Header";
 import { AnswerBox } from "../../components/AnswerBox";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-export const Answers = (): JSX.Element => {
+interface LocationState {
+  userAnswers: Record<string, string>;
+}
+
+export const Answers: React.FC = () => {
+  const location = useLocation();
+  const { userAnswers } = (location.state as LocationState) || {};
+
   const navigate = useNavigate(); // Create navigate function
 
   const handleFinishLearning = () => {
-    navigate('/myPage'); // Navigate to the MyPage
+    navigate("/myPage"); // Navigate to the MyPage
   };
   return (
     <div className="answers">
@@ -21,31 +28,31 @@ export const Answers = (): JSX.Element => {
               questionNumber="1"
               questionText="What is deep learning?"
               modelAnswer="Deep learning is a subset of machine learning..."
-              userAnswer="It's a type of machine learning..."
+              userAnswer={userAnswers?.["1"] || ""}
             />
             <AnswerBox
-              questionNumber="1"
+              questionNumber="2"
               questionText="What is deep learning?"
               modelAnswer="Deep learning is a subset of machine learning..."
-              userAnswer="It's a type of machine learning..."
+              userAnswer={userAnswers?.["2"] || ""}
             />
             <AnswerBox
-              questionNumber="1"
+              questionNumber="3"
               questionText="What is deep learning?"
               modelAnswer="Deep learning is a subset of machine learning..."
-              userAnswer="It's a type of machine learning..."
+              userAnswer={userAnswers?.["3"] || ""}
             />
             <AnswerBox
-              questionNumber="1"
+              questionNumber="4"
               questionText="What is deep learning?"
               modelAnswer="Deep learning is a subset of machine learning..."
-              userAnswer="It's a type of machine learning..."
+              userAnswer={userAnswers?.["4"] || ""}
             />
             <AnswerBox
-              questionNumber="1"
+              questionNumber="5"
               questionText="What is deep learning?"
               modelAnswer="Deep learning is a subset of machine learning..."
-              userAnswer="It's a type of machine learning..."
+              userAnswer={userAnswers?.["5"] || ""}
             />
           </div>
           <div className="secondary-button" onClick={handleFinishLearning}>
