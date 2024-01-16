@@ -1,19 +1,21 @@
-import React from "react";
-import "./style.css";
+import React, { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import YouTube from "react-youtube";
 import { Header } from "../../components/Header";
 import { PrimaryButton } from "../../components/PrimaryButton";
 import { SecondaryButton } from "../../components/SecondaryButton";
-import YouTube from "react-youtube";
-import { useNavigate, useParams } from "react-router-dom";
 
-export const WatchClass = (): JSX.Element => {
+export const WatchClass: React.FC = () => {
   const { videoUrl } = useParams<{ videoUrl: string }>();
-  const navigate = useNavigate(); // Create navigate function
+  const navigate = useNavigate();
+  const [title, setTitle] = useState<string>(""); // Type specified as string
+  const [notes, setNotes] = useState<string>(""); // Type specified as string
 
   // Event handler for the "End Study" button
   const handleEndStudyClick = () => {
-    navigate(`/questions/${videoUrl}`); // Navigate to /questions/{videoUrl}
+    navigate(`/questions/${videoUrl}`);
   };
+
   return (
     <div className="watch-class">
       <div className="div-2">
@@ -21,7 +23,7 @@ export const WatchClass = (): JSX.Element => {
         <div className="row">
           <div className="video-column">
             <div className="video">
-            <YouTube
+              <YouTube
                 videoId={videoUrl} // Use videoUrl here
                 opts={{
                   width: "100%",
@@ -38,18 +40,31 @@ export const WatchClass = (): JSX.Element => {
               <div className="frame-3">
                 <PrimaryButton label="요약본 만들기" />
                 <PrimaryButton label="자료 저장하기" />
-                <SecondaryButton label="학습 종료하기" onClick={handleEndStudyClick} /> {/* Add onClick event to the button */}
+                <SecondaryButton
+                  label="학습 종료하기"
+                  onClick={handleEndStudyClick}
+                />{" "}
+                {/* Add onClick event to the button */}
               </div>
             </div>
           </div>
           <div className="textframe">
             <div className="frame-4">
               <div className="div-wrapper">
-                <div className="text-wrapper-5">제목</div>
+                <input
+                  className="text-input"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  placeholder="제목을 입력하세요" // Placeholder for the title
+                />
               </div>
-              <div className="text-wrapper-6">
-                필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기필기
-              </div>
+              <textarea
+                className="notes-textarea"
+                value={notes}
+                onChange={(e) => setNotes(e.target.value)}
+                placeholder="필기 내용을 여기에 작성하세요 (Markdown 형식 지원)" // Placeholder for the notes
+                rows={10} // Adjust the number of rows as needed
+              />
             </div>
           </div>
         </div>
