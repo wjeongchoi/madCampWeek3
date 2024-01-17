@@ -1,0 +1,1 @@
+export { AddLectureDialog } from "./AddLectureDialog";

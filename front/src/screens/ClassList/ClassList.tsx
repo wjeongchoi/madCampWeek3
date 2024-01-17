@@ -5,6 +5,7 @@ import { SecondaryButton } from "../../components/SecondaryButton";
 import { LectureBox } from "../../components/LectureBox";
 import { useNavigate } from "react-router-dom";
 import { getRequest } from "../../axios";
+import { AddLectureDialog } from "../../components/AddLectureDialog"
 
 interface LectureData {
   id: number;
@@ -17,14 +18,26 @@ interface LectureData {
 export const ClassList: React.FC = (): JSX.Element => {
   const navigate = useNavigate();
   const [lectures, setLectures] = useState<LectureData[]>([]);
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [isAddLectureDialogOpen, setIsAddLectureDialogOpen] = useState<boolean>(false);
+
 
   const navigateToClassDetail = (lectureId: number) => {
     navigate(`/classDetail/${lectureId}`); // Assuming you have a route like this
   };
 
-  useEffect(() => {
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSearch = () => {
+    if (!searchQuery) {
+      // If the search query is empty, reload the initial list
+      loadInitialLectures();
+      return;
+    }
     getRequest(
-      "lecture/lecture_list/",
+      `lecture/search?query=${searchQuery}`,
       (data: LectureData[]) => {
         setLectures(data);
       },
@@ -32,6 +45,22 @@ export const ClassList: React.FC = (): JSX.Element => {
         console.error("Error while fetching lectures:", error);
       }
     );
+  };
+
+  const loadInitialLectures = () => {
+    getRequest(
+      "lecture/lecture_list/",
+      (data: LectureData[]) => {
+        setLectures(data);
+      },
+      (error: any) => {
+        console.error("Error while fetching initial lectures:", error);
+      }
+    );
+  };
+
+  useEffect(() => {
+    loadInitialLectures();
   }, []);
 
   const handleAddLectureClick = () => {
@@ -40,7 +69,7 @@ export const ClassList: React.FC = (): JSX.Element => {
       alert("로그인이 필요한 서비스입니다.");
       navigate("/login");
     } else {
-      // 로그인한 경우, 강의 추가 로직 구현
+      setIsAddLectureDialogOpen(true);
     }
   };
 
@@ -52,9 +81,15 @@ export const ClassList: React.FC = (): JSX.Element => {
           <div className="frame-4">
             <div className="input-text">
               <div className="text-wrapper-6">
-                듣고 싶은 강의를 검색해보세요
+              <input
+                type="text"
+                placeholder="듣고 싶은 강의를 검색해보세요"
+                value={searchQuery}
+                onChange={handleSearchChange}
+              />
               </div>
             </div>
+            <SecondaryButton label="검색" onClick={handleSearch} />
             <SecondaryButton
               label="나만의 강의 추가하기"
               onClick={handleAddLectureClick}
@@ -74,6 +109,10 @@ export const ClassList: React.FC = (): JSX.Element => {
           </div>
         </div>
       </div>
+      <AddLectureDialog
+        isOpen={isAddLectureDialogOpen}
+        onClose={() => setIsAddLectureDialogOpen(false)}
+      />
     </div>
   );
 };
