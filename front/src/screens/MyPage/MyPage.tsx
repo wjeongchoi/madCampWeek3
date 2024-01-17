@@ -73,6 +73,7 @@ export const MyPage: React.FC = (): JSX.Element => {
 
   const handleLogout = () => {
     localStorage.removeItem("userID");
+    alert('로그아웃 완료');
     navigate("/");
   };
 

@@ -71,6 +71,16 @@ export const WatchClass: React.FC = () => {
   const handleSaveNotes = async () => {
     const userId = localStorage.getItem("userID");
 
+    if (!title.trim()) {
+      alert("제목을 입력해주세요");
+      return;
+    }
+
+    if (!notes.trim()) {
+      alert("내용을 입력해주세요");
+      return;
+    }
+
     const requestData = {
       video_id: videoId,
       title: title,
