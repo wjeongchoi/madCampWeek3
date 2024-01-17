@@ -37,18 +37,17 @@ export const ClassList: React.FC = (): JSX.Element => {
       return;
     }
     getRequest(
-      `lecture/search?query=${searchQuery}`,
+      `lecture/search/?query=${encodeURIComponent(searchQuery)}`,
       (data: LectureData[]) => {
         setLectures(data);
-        alert(data);
       },
       (error: any) => {
         console.error("Error while fetching lectures:", error);
-        alert(error);
+        alert(error); // Updated to display error message
       }
     );
   };
-
+  
   const loadInitialLectures = () => {
     getRequest(
       "lecture/lecture_list/",
