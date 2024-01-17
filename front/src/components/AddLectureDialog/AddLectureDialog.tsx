@@ -15,13 +15,14 @@ export const AddLectureDialog: React.FC<AddLectureDialogProps> = ({ isOpen, onCl
       video_url: videoUrl,
       video_title: videoTitle
     };
-    postRequest("lecture/add-youtube-video", body, 
+    postRequest("lecture/add-youtube-video/", body, 
       () => {
         alert("강의가 성공적으로 추가되었습니다.");
         onClose(); // 다이얼로그 닫기
       },
       (error: any) => {
         console.error("Error while adding lecture:", error);
+        alert(error);
       }
     );
   };

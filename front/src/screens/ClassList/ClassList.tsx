@@ -5,22 +5,22 @@ import { SecondaryButton } from "../../components/SecondaryButton";
 import { LectureBox } from "../../components/LectureBox";
 import { useNavigate } from "react-router-dom";
 import { getRequest } from "../../axios";
-import { AddLectureDialog } from "../../components/AddLectureDialog"
+import { AddLectureDialog } from "../../components/AddLectureDialog";
 
 interface LectureData {
   id: number;
-  thumbnail_url: string;
-  date: string;
   title: string;
+  date: string;
   desc: string;
+  thumbnail_url: string;
 }
 
 export const ClassList: React.FC = (): JSX.Element => {
   const navigate = useNavigate();
   const [lectures, setLectures] = useState<LectureData[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>("");
-  const [isAddLectureDialogOpen, setIsAddLectureDialogOpen] = useState<boolean>(false);
-
+  const [isAddLectureDialogOpen, setIsAddLectureDialogOpen] =
+    useState<boolean>(false);
 
   const navigateToClassDetail = (lectureId: number) => {
     navigate(`/classDetail/${lectureId}`); // Assuming you have a route like this
@@ -40,9 +40,11 @@ export const ClassList: React.FC = (): JSX.Element => {
       `lecture/search?query=${searchQuery}`,
       (data: LectureData[]) => {
         setLectures(data);
+        alert(data);
       },
       (error: any) => {
         console.error("Error while fetching lectures:", error);
+        alert(error);
       }
     );
   };
@@ -81,12 +83,12 @@ export const ClassList: React.FC = (): JSX.Element => {
           <div className="frame-4">
             <div className="input-text">
               <div className="text-wrapper-6">
-              <input
-                type="text"
-                placeholder="듣고 싶은 강의를 검색해보세요"
-                value={searchQuery}
-                onChange={handleSearchChange}
-              />
+                <input
+                  type="text"
+                  placeholder="듣고 싶은 강의를 검색해보세요"
+                  value={searchQuery}
+                  onChange={handleSearchChange}
+                />
               </div>
             </div>
             <SecondaryButton label="검색" onClick={handleSearch} />
@@ -95,6 +97,10 @@ export const ClassList: React.FC = (): JSX.Element => {
               onClick={handleAddLectureClick}
             />
           </div>
+          <AddLectureDialog
+            isOpen={isAddLectureDialogOpen}
+            onClose={() => setIsAddLectureDialogOpen(false)}
+          />
           <div className="frame-5">
             {lectures.map((lecture) => (
               <LectureBox
@@ -109,10 +115,6 @@ export const ClassList: React.FC = (): JSX.Element => {
           </div>
         </div>
       </div>
-      <AddLectureDialog
-        isOpen={isAddLectureDialogOpen}
-        onClose={() => setIsAddLectureDialogOpen(false)}
-      />
     </div>
   );
 };
