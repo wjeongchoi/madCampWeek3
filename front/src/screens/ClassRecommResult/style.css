@@ -14,7 +14,7 @@
     align-items: center; /* Center horizontally */
     justify-content: flex-start; /* Align content to the start */
     width: 100%; /* Full width */
-    padding-top: 120px; /* Adjust this value based on header height */
+    padding-top: 100px; /* Adjust this value based on header height */
 }
 
 .class-recomm-result .header-instance {
@@ -30,14 +30,13 @@
     flex-direction: row;
     align-items: center; /* Center horizontally */
     justify-content: center;
-    gap: 6rem;
+    gap: 3rem;
     width: 100%; /* Full width */
 }
 .class-recomm-result .group {
     position: relative;
     width: 80%;
-    margin-left: 10rem;
-    flex-direction: column;
+    margin-left: 9rem;
 }
 
 .class-recomm-result .a-ipple {
@@ -79,7 +78,6 @@
 .class-recomm-result .frame-3 {
     display: flex;
     justify-content: center; /* Center horizontally */
-    gap: 40px;
     width: 100%; /* Full width */
     flex-wrap: wrap; /* Wrap items if necessary */
 }

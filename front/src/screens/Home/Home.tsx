@@ -62,8 +62,8 @@ export const Home = (): JSX.Element => {
             <SmallLectureBox lectureId={"0"} />
             <SmallLectureBox lectureId={"1"} />
             <SmallLectureBox lectureId={"3"} />
-            <SmallLectureBox lectureId={"5"} />
             <SmallLectureBox lectureId={"4"} />
+            <SmallLectureBox lectureId={"5"} />
       </div>
         </div>
         <div className="frame-3">

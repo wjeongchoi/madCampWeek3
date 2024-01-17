@@ -16,6 +16,7 @@
   overflow: hidden;
   position: relative;
   width: 100%;
+  flex-direction: column;
 }
 
 .home .overlap-2 {
@@ -77,8 +78,9 @@
   align-items: center; /* Center items horizontally */
   width: 100%; /* Full width */
   gap: 40px;
-  margin-top: 650px;
-  margin-bottom: 20px;
+  margin-top: 700px;
+  margin-bottom: 5rem;
+  position: relative;
 }
 
 .home .a-ipple-wrapper {
@@ -118,7 +120,7 @@
 
 .home .frame-4 {
   align-items: flex-start;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   gap: 50px;
   left: 49px;
@@ -134,9 +136,9 @@
 
 .home .frame-5 {
   display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-  flex-wrap: nowrap; /* Prevents the items from wrapping */
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
   width: 100%; /* Ensures the container fits its parent's width */
   gap: 20px; /* Adjust as needed for spacing between boxes */
 }
