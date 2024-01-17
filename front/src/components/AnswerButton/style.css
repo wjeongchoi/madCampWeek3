@@ -1,0 +1,22 @@
+.answer-button {
+    background-color: #296FF4;
+    border-radius: 10px;
+    height: 60px;
+    width: 550px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative;
+}
+
+.answer-button .text-wrapper {
+    color: #ffffff;
+    font-family: "Noto Sans", Helvetica;
+    font-size: 22px;
+    font-weight: 600;
+    /* Remove the absolute positioning and use flexbox for centering */
+    letter-spacing: 0;
+    text-align: center;
+    /* The width can be 100% to use the full width of the button for centering */
+    width: 100%;
+}
