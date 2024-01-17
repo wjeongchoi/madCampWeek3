@@ -7,7 +7,7 @@
 }
 
 .answer-box .frame {
-    height: 65px;
+    height: auto;
     position: relative;
     width: 799px;
 }
@@ -17,11 +17,11 @@
     border: 1px solid;
     border-color: #d9d9d9;
     border-radius: 10px;
-    height: 65px;
+    height: auto;
     left: 48px;
-    position: absolute;
+    position: relative;
     top: 0;
-    width: 751px;
+    width: 750px;
 }
 
 .answer-box .text-wrapper {
@@ -29,14 +29,16 @@
     font-family: "Noto Sans-DisplaySemiBold", Helvetica;
     font-size: 22px;
     font-weight: 600;
-    height: 44px;
+    height: auto; /* Updated from fixed height */
     left: 13px;
     letter-spacing: 0;
     line-height: 40px;
-    position: absolute;
+    position: relative;
     top: 8px;
-    white-space: nowrap;
-    width: 384px;
+    white-space: normal;
+    width: 730px;
+    text-align: left;
+    margin-bottom: 15px; /* Add bottom margin */
 }
 
 .answer-box .div {
@@ -54,7 +56,7 @@
 }
 
 .answer-box .frame-2 {
-    height: 65px;
+    height: auto;
     position: relative;
     width: 797px;
 }
@@ -64,11 +66,12 @@
     border: 1px solid;
     border-color: #d9d9d9;
     border-radius: 10px;
-    height: 65px;
+    height: auto;
+    min-height: 60px;
     left: 46px;
-    position: absolute;
+    position: relative;
     top: 0;
-    width: 751px;
+    width: 750px;
 }
 
 .answer-box .text-wrapper-2 {
@@ -76,14 +79,17 @@
     font-family: "Noto Sans-DisplaySemiBold", Helvetica;
     font-size: 22px;
     font-weight: 600;
-    height: 44px;
+    height: auto; /* Allow dynamic height */
     left: 13px;
     letter-spacing: 0;
-    line-height: 40px;
-    position: absolute;
+    line-height: 40px; /* Adjust line height as needed */
+    position: relative;
     top: 8px;
-    white-space: nowrap;
-    width: 384px;
+    white-space: normal; /* Allow text wrapping */
+    width: 730px; /* Adjust width as needed */
+    text-align: left;
+    word-break: break-word; /* Breaks words at the end of the line */
+    margin-bottom: 15px; /* Add bottom margin */
 }
 
 .answer-box .text-wrapper-3 {
@@ -91,10 +97,13 @@
     font-family: "Noto Sans-DisplaySemiBold", Helvetica;
     font-size: 22px;
     font-weight: 600;
-    height: 44px;
+    height: 120px; /* Height for 3 lines */
     letter-spacing: 0;
-    line-height: 40px;
+    line-height: 40px; /* Adjust as per your design */
+    overflow-y: auto; /* Enable vertical scrolling */
     position: relative;
-    white-space: nowrap;
-    width: 737px;
+    white-space: normal;
+    width: 730px;
+    text-align: left;
+    box-sizing: border-box; /* Include padding in the height calculation */
 }

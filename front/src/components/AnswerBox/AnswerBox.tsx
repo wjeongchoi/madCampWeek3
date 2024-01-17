@@ -24,7 +24,7 @@ export const AnswerBox = ({
             </div>
             <div className="frame-2">
                 <div className="overlap">
-                    <div className="text-wrapper-2">{userAnswer || "답을 입력하세요"}</div>
+                    <div className="text-wrapper-2">{userAnswer}</div>
                 </div>
                 <div className="div">A{questionNumber}:</div>
             </div>
