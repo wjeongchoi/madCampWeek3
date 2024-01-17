@@ -45,8 +45,7 @@
 - User model을 만들어 회원가입과 로그인 view를 만듭니다.
 
 ## 2 홈
-![홈](https://github.com/wjeongchoi/madCampWeek3/assets/32153103/db5bc87f-27a9-4a9b-9cd8-ab7eaf64e9dd)
-
+<img src='./images/홈.gif' width="30%">
 
 ### 2.1 주요 기능
 
@@ -54,6 +53,8 @@
 - 로고 또는 홈 탭을 누르면 홈 화면으로 이동합니다.
 
 ## 3  강의 목록
+<img src='./images/강의 검색.gif' width="30%">
+<img src='./images/나만의 강의 추가.gif' width="30%">
 
 ### 3.1 주요 기능
 
@@ -62,8 +63,7 @@
 - 목록에 없는 강의는 사용자가 직접 추가할 수 있습니다.
 
 ## 4 강의 추천
-
-![화면-기록-2024-01-17-오후-7.10.36.gif](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/ed654f8b-9d1a-4c35-b709-ef2fc41770a4/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB-%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8-2024-01-17-%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE-7.10.36.gif)
+<img src='./images/강의추천.gif' width="30%">
 
 ### 4.1 주요 기능
 
@@ -72,8 +72,7 @@
 - 추천받은 강의를 바로 학습할 수 있습니다.
 
 ## 5 수강 페이지
-
-![화면-기록-2024-01-17-오후-7.14.52-_online-video-cutter.com_.gif](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/6d341540-a5d3-451e-a725-9919b676184d/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB-%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8-2024-01-17-%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE-7.14.52-_online-video-cutter.com_.gif)
+<img src='./images/수강페이지.gif' width="30%">
 
 ### 5.1 주요 기능
 
@@ -102,7 +101,7 @@
 
 ## 6 마이 페이지
 
-![화면-기록-2024-01-17-오후-7.24.31-_online-video-cutter.com_.gif](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/0814afab-ef34-4982-987e-1917628804d5/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB-%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8-2024-01-17-%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE-7.24.31-_online-video-cutter.com_.gif)
+<img src='./images/마이페이지.gif' width="30%">
 
 ### 6.1 주요 기능
 
