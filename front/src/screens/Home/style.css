@@ -78,7 +78,7 @@
   align-items: center; /* Center items horizontally */
   width: 100%; /* Full width */
   gap: 40px;
-  margin-top: 50%;
+  margin-top: 100vh;
   margin-bottom: 5rem;
   position: relative;
 }
