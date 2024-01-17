@@ -4,11 +4,11 @@ import { SecondaryButton } from "../../components/SecondaryButton";
 import { Header } from "../../components/Header";
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
-export const ClassRecommFinal = (): JSX.Element => {
+export const ClassRecommFinal = ({userChoices}:{userChoices?: string[]}): JSX.Element => {
     const navigate = useNavigate(); // Initialize useNavigate
 
     const handleButtonClick = () => {
-        navigate('/classRecommResult'); // Navigate to ClassRecommResult page
+        navigate('/classRecommResult', { state: { userChoices } }); // Navigate to ClassRecommResult page
     };
 
     return (
