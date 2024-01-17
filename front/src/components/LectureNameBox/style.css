@@ -2,6 +2,7 @@
     border-radius: 10px;
     box-shadow: 3px 3px 10px #00000040;
     height: 66px;
+    min-height: 70px;
     display: flex; /* Enable flexbox layout */
     align-items: center; /* Vertically center the content */
     padding: 0 25px; /* Add horizontal padding */
@@ -34,7 +35,6 @@
     letter-spacing: 0;
     line-height: normal;
     text-align: left; /* Left-align the text */
-    flex-grow: 1; /* Allow this element to take up the remaining space */
 }
 
 .lecture-name-box.selected-true {
