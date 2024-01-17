@@ -30,6 +30,8 @@ export const MyPage: React.FC = (): JSX.Element => {
   const [lectures, setLectures] = useState<Lecture[]>([]); // Use the Lecture interface for typing
   const [lectureNotes, setLectureNotes] = useState<LectureNote[]>([]);
   const [selectedNoteMemo, setSelectedNoteMemo] = useState<string>("");
+  const [selectedLectureTitle, setSelectedLectureTitle] = useState<string>("");
+  const [selectedLectureNumber, setSelectedLectureNumber] = useState<number>(0);
 
   const navigate = useNavigate();
 
@@ -49,6 +51,12 @@ export const MyPage: React.FC = (): JSX.Element => {
     }
   }, []);
 
+  const handleContentBoxClick = (note: LectureNote) => {
+    setSelectedNoteMemo(note.memo);
+    setSelectedLectureTitle(note.title);
+    setSelectedLectureNumber(note.vid);
+  };
+
   // Fetch lecture notes when a lecture is selected
   const selectLecture = (lectureId: number) => {
     setSelectedLecture(lectureId);
@@ -67,13 +75,11 @@ export const MyPage: React.FC = (): JSX.Element => {
     }
   };
 
-  const handleContentBoxClick = (memo: string) => {
-    setSelectedNoteMemo(memo);
-  };
+
 
   const handleLogout = () => {
     localStorage.removeItem("userID");
-    alert('로그아웃 완료');
+    alert("로그아웃 완료");
     navigate("/");
   };
 
@@ -110,11 +116,14 @@ export const MyPage: React.FC = (): JSX.Element => {
                   lectureTitle={`Lecture ${Number(note.vid) + 1}`}
                   date={note.date}
                   resourceTitle={note.title}
-                  onClick={() => handleContentBoxClick(note.memo)} // Assuming note includes a memo field
+                  onClick={() => handleContentBoxClick(note)} // Assuming note includes a memo field
                 />
               ))}
               {selectedNoteMemo && (
                 <div className="selected-note-memo">
+                  <h3>
+                    Lecture {Number(selectedLectureNumber) + 1}: {selectedLectureTitle}
+                  </h3>
                   <p>{selectedNoteMemo}</p>
                 </div>
               )}

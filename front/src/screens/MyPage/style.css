@@ -109,3 +109,36 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
+.selected-note-memo {
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  padding: 15px; /* Padding for internal spacing */
+  margin-top: 10px; /* Margin for spacing from other elements */
+  width: 90%; /* Full width to match parent container */
+  box-sizing: border-box; /* Include padding in the width and height calculations */
+  font-family: "Noto Sans-Regular", Helvetica;
+  font-size: 18px;
+  color: #000000;
+  line-height: normal;
+  text-align: left; /* Align text to the left */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  max-height: 200px; /* Maximum height before scrolling */
+}
+
+.selected-note-memo h3 {
+  font-family: "Noto Sans-DisplaySemiBold", Helvetica;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000000; /* A color to make the title stand out */
+  margin-bottom: 10px;
+}
+
+.selected-note-memo p {
+  font-family: "Noto Sans-Regular", Helvetica;
+  font-size: 18px;
+  color: #000000;
+  line-height: normal;
+  text-align: left;
+}
