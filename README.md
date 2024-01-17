@@ -31,8 +31,8 @@
 - 반응형 웹으로, 창 크기에 맞춰 컴포넌트가 정렬됩니다.
 
 ## 1 로그인
-<img width="1511" alt="로그인" src="https://github.com/wjeongchoi/madCampWeek3/assets/32153103/06c65a0b-c302-49e5-b538-bc2f05d0651c">
-<img width="1511" alt="회원가입" src="https://github.com/wjeongchoi/madCampWeek3/assets/32153103/79d2ee77-4c12-42d4-b655-57bb5d4a4816">
+<img src='./images/로그인.png' width="50%">
+<img src='./images/회원가입.png' width="50%">
 
 ### 1.1 주요 기능
 
