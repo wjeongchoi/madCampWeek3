@@ -1,0 +1,28 @@
+.add-lecture-dialog {
+    display: flex;
+    flex-direction: row; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    gap: 1rem;
+}
+
+.add-lecture-dialog input{
+    padding: 10px; /* Padding for better readability */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 10px; /* Rounded corners */
+    color: #000000;
+    font-family: "Noto Sans-DisplaySemiBold", Helvetica;
+    font-size: 22px;
+    font-weight: 600;
+    height: 50px;
+    letter-spacing: 0;
+    line-height: 40px;
+    position: relative;
+}
+
+.add-lecture-dialog .secondary-button {
+    font-size: 16px; /* Reduced font size */
+    padding: 10px 20px; /* Adjust padding to reduce size */
+    height: auto; /* Height to fit content */
+    width: auto; /* Width to fit content */
+    border-radius: 10px; /* Adjust border radius for aesthetics */
+}
