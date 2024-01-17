@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column; /* Stack children vertically */
     align-items: center; /* Center horizontally */
+    justify-content: center;
     width: 100%;
     min-height: 100vh; /* Ensure minimum height of the viewport */
 }
@@ -13,7 +14,7 @@
     align-items: center; /* Center horizontally */
     justify-content: flex-start; /* Align content to the start */
     width: 100%; /* Full width */
-    padding-top: 110px; /* Adjust this value based on header height */
+    padding-top: 120px; /* Adjust this value based on header height */
 }
 
 .class-recomm-result .header-instance {
@@ -26,15 +27,17 @@
 
 .class-recomm-result .frame-2 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center; /* Center horizontally */
-    gap: 60px;
+    justify-content: center;
+    gap: 6rem;
     width: 100%; /* Full width */
 }
 .class-recomm-result .group {
-    height: 108px;
     position: relative;
-    width: 556px;
+    width: 80%;
+    margin-left: 10rem;
+    flex-direction: column;
 }
 
 .class-recomm-result .a-ipple {
@@ -42,13 +45,11 @@
     font-family: "Noto Sans-SemiBold", Helvetica;
     font-size: 40px;
     font-weight: 400;
-    height: 54px;
     left: 0;
     letter-spacing: 0;
     line-height: normal;
-    position: absolute;
+    position: relative;
     text-align: center;
-    top: 54px;
 }
 
 .class-recomm-result .span {
@@ -64,11 +65,9 @@
     font-family: "Noto Sans-SemiBold", Helvetica;
     font-size: 40px;
     font-weight: 400;
-    height: 54px;
-    left: 100px;
     letter-spacing: 0;
     line-height: normal;
-    position: absolute;
+    position: relative;
     text-align: center;
     top: 0;
 }
