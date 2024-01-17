@@ -107,7 +107,6 @@ export const WatchClass: React.FC = () => {
   return (
     <div className="watch-class">
       <div className="div-2">
-        {isLoading && <div className="loading-indicator">요약본 생성중...</div>}
         <Header className="header-instance" />
         <div className="row">
           <div className="video-column">
@@ -147,6 +146,9 @@ export const WatchClass: React.FC = () => {
                   placeholder="제목을 입력하세요" // Placeholder for the title
                 />
               </div>
+              {isLoading && (
+                <div className="loading-indicator">요약본 생성중...</div>
+              )}
               <textarea
                 className="notes-textarea"
                 value={notes}

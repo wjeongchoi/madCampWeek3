@@ -144,3 +144,10 @@
   position: relative;
   width: 80%;
 }
+
+.watch-class .loading-indicator{
+  font-family: "Noto Sans-Regular", Helvetica;
+  color: #1C50B4;
+  font-weight: 700;
+  font-size: 20px;
+}

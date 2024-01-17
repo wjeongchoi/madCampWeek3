@@ -61,3 +61,12 @@
     letter-spacing: 0;
     text-align: center; /* 텍스트 중앙 정렬 */
 }
+
+.questions .loading-message{
+    justify-content: center;
+    font-family: "Noto Sans-Regular", Helvetica;
+    color: #1C50B4;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 10%;
+}
