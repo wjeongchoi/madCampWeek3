@@ -45,7 +45,7 @@
 - User model을 만들어 회원가입과 로그인 view를 만듭니다.
 
 ## 2 홈
-<img src='./images/홈.gif' width="30%">
+<img src='./images/홈.png' width="50%">
 
 ### 2.1 주요 기능
 
@@ -53,8 +53,8 @@
 - 로고 또는 홈 탭을 누르면 홈 화면으로 이동합니다.
 
 ## 3  강의 목록
-<img src='./images/강의 검색.gif' width="30%">
-<img src='./images/나만의 강의 추가.gif' width="30%">
+<img src='./images/강의 검색.gif' width="50%">
+<img src='./images/나만의 강의 추가.gif' width="50%">
 
 ### 3.1 주요 기능
 
@@ -63,7 +63,7 @@
 - 목록에 없는 강의는 사용자가 직접 추가할 수 있습니다.
 
 ## 4 강의 추천
-<img src='./images/강의추천.gif' width="30%">
+<img src='./images/강의추천.gif' width="50%">
 
 ### 4.1 주요 기능
 
@@ -72,7 +72,7 @@
 - 추천받은 강의를 바로 학습할 수 있습니다.
 
 ## 5 수강 페이지
-<img src='./images/수강페이지.gif' width="30%">
+<img src='./images/수강페이지.gif' width="50%">
 
 ### 5.1 주요 기능
 
@@ -101,7 +101,7 @@
 
 ## 6 마이 페이지
 
-<img src='./images/마이페이지.gif' width="30%">
+<img src='./images/마이페이지.gif' width="50%">
 
 ### 6.1 주요 기능
 
