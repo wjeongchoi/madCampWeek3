@@ -4,35 +4,39 @@ import { getRequest } from "../../axios";
 import "./style.css";
 
 interface SmallLectureBoxProps {
-    lectureId: string;
+  lectureId: string;
 }
 
-export const SmallLectureBox = ({ lectureId }: SmallLectureBoxProps): JSX.Element => {
-    const [title, setTitle] = useState<string>("");
-    const [thumbnailUrl, setThumbnailUrl] = useState<string>("");
-    const navigate = useNavigate();
+export const SmallLectureBox = ({
+  lectureId,
+}: SmallLectureBoxProps): JSX.Element => {
+  const [title, setTitle] = useState<string>("");
+  const [thumbnailUrl, setThumbnailUrl] = useState<string>("");
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        getRequest(
-            `lecture/${lectureId}/`,
-            (data) => {
-                setTitle(data.title);
-                setThumbnailUrl(data.thumbnail_url);
-            },
-            (error) => {
-                console.error("Error fetching lecture details:", error);
-            }
-        );
-    }, [lectureId]);
-
-    const handleClick = () => {
-        navigate(`/classDetail/${lectureId}`);
-    };
-
-    return (
-        <div className="small-lecture-box" onClick={handleClick}>
-            <p className="small-text-wrapper">{title}</p>
-            <img className="image" alt={title} src={thumbnailUrl} />
-        </div>
+  useEffect(() => {
+    getRequest(
+      `lecture/${lectureId}/`,
+      (data) => {
+        setTitle(data.title);
+        setThumbnailUrl(data.thumbnail_url);
+      },
+      (error) => {
+        console.error("Error fetching lecture details:", error);
+      }
     );
+  }, [lectureId]);
+
+  const handleClick = () => {
+    navigate(`/classDetail/${lectureId}`);
+  };
+
+  return (
+    <div className="small-lecture-box" onClick={handleClick}>
+      <div className="text-container">
+        <p className="small-text-wrapper">{title}</p>
+        <img className="image" alt={title} src={thumbnailUrl} />
+      </div>
+    </div>
+  );
 };

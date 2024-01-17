@@ -132,7 +132,7 @@
   width: 236px;
 }
 
-.frame-5 {
+.home .frame-5 {
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
@@ -142,10 +142,11 @@
 }
 
 
-.small-lecture-box {
+.home .small-lecture-box {
   flex: 0 0 auto; /* Ensures that boxes don't shrink and maintain their size */
   width: 400px; /* Or whatever width your boxes should have */
 }
+
 .home .overlap-3 {
   height: 233px;
   left: 7px;
