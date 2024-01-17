@@ -1,62 +1,86 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { postRequest } from "../../axios"; // Ensure this import is correct based on your project structure
+import { useParams, useNavigate } from "react-router-dom";
+import { getRequest, postRequest } from "../../axios";
 
 import "./style.css";
 import { Header } from "../../components/Header";
 import { QuestionBox } from "../../components/QuestionBox";
-import { useNavigate } from "react-router-dom";
 
 export const Questions: React.FC = () => {
-  const [questions, setQuestions] = useState<string[]>([]);
+  // Updated the state to hold an array of objects with Question and Answer
+  const [questions, setQuestions] = useState<
+    { Question: string; Answer: string }[]
+  >([]);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const navigate = useNavigate();
-  const { videoUrl } = useParams<{ videoUrl: string }>();
+  const { lectureId, videoId } = useParams<{
+    lectureId: string;
+    videoId: string;
+  }>();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    // Fetch questions when the component mounts
-    postRequest(
-      `inference/makeqna/`,
-      { vid: videoUrl }, // Sending videoUrl as 'vid' in the request body
+    setIsLoading(true); // Start loading
+    getRequest(
+      `lecture/${lectureId}/video/${videoId}/`,
       (response) => {
-        // Assuming the response data contains an array of questions
-        setQuestions(response.data.questions);
+        const videoUrl: string = response.video_url;
+        postRequest(
+          "inference/make_qna/",
+          { vid: videoUrl },
+          (response) => {
+            setQuestions(response.data.message);
+            setIsLoading(false); // Stop loading after request completes
+          },
+          (error) => {
+            console.error("Error fetching questions:", error);
+            alert(error);
+            setIsLoading(false); // Stop loading on error
+          }
+        );
       },
       (error) => {
-        console.error("Error fetching questions:", error);
+        console.error("Error fetching video URL:", error);
         alert(error);
+        setIsLoading(false); // Stop loading on error
       }
     );
-  }, [videoUrl]);
+  }, [lectureId, videoId]);
 
   const handleAnswerChange = (questionNumber: string, answer: string) => {
     setAnswers((prevAnswers) => ({ ...prevAnswers, [questionNumber]: answer }));
   };
 
   const handleViewModelAnswers = () => {
-    navigate("/answers", { state: { userAnswers: answers } });
+    navigate(`/answers/${lectureId}/${videoId}`, {
+      state: { userAnswers: answers, questions: questions },
+    });
   };
 
   return (
     <div className="questions">
-      <div className="div-2">
-        <Header className="header-instance" />
-        <div className="frame-4">
-          <div className="frame-5">
-            {questions.map((question, index) => (
-              <QuestionBox
-                key={index}
-                questionNumber={`${index + 1}`}
-                questionText={question}
-                onAnswerChange={handleAnswerChange}
-              />
-            ))}
-          </div>
-          <div className="secondary-button" onClick={handleViewModelAnswers}>
-            <div className="text-wrapper-6">모범답안 확인</div>
+      {isLoading ? (
+        <div className="loading-message">질문 생성 중...</div>
+      ) : (
+        <div className="div-2">
+          <Header className="header-instance" />
+          <div className="frame-4">
+            <div className="frame-5">
+              {questions.map((item, index) => (
+                <QuestionBox
+                  key={index}
+                  questionNumber={`${index + 1}`}
+                  questionText={item.Question}
+                  onAnswerChange={handleAnswerChange}
+                />
+              ))}
+            </div>
+            <div className="secondary-button" onClick={handleViewModelAnswers}>
+              <div className="text-wrapper-6">모범답안 확인</div>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

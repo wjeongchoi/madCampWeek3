@@ -10,7 +10,7 @@ interface HorizontalLectureBoxProps {
   
   export const HorizontalLectureBox: React.FC<HorizontalLectureBoxProps> = ({ selected, title, date, onClick }) => {
     return (
-      <div className={`horizontal-lecture-box ${selected ? 'selected' : ''}`} onClick={onClick}>
+      <div className={`horizontal-lecture-box ${selected ? 'selected' : 'not-selected'}`} onClick={onClick}>
             <div className="frame">
                 <div className="text-wrapper">{title}</div>
                 <div className="div">{date}</div>

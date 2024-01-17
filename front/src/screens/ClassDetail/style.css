@@ -2,17 +2,14 @@
     background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(215, 238, 255) 100%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 100%;
-    height: 100vh;
 }
 
 .class-detail .div-2 {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-    width: 100%;
+    flex-direction: column;
     display: flex; /* Enable flexbox layout */
-    justify-content: center; /* Center the children horizontally */
 }
 
 .class-detail .header-instance {
@@ -26,27 +23,25 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    top: 123px;
+    top: 120px;
     width: 100%; /* Full width to contain both frames */
     display: flex; /* Enable flexbox layout */
     justify-content: center; /* Center the children horizontally */
+    max-height: 100vh;
 }
 
 .class-detail .frame-4 {
     align-items: flex-start;
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     flex: 0 0 auto;
-    gap: 86px;
     position: relative;
-    flex: 1; /* Make each frame take equal width */
-
 }
 
 .class-detail .frame-5 {
-    display: inline-flex;
+    display: flex;
     flex: 0 0 auto;
     flex-direction: column;
-    gap: 20px;
     position: relative;
     width: 50%; /* Half of the parent container's width */
     align-items: center; /* Center the content vertically */
@@ -61,14 +56,13 @@
     line-height: normal;
     margin-top: -1px;
     position: relative;
-    width: 590px;
+    width: 80%;
 }
 
 .class-detail .image {
-    height: 330.32px;
     object-fit: cover;
     position: relative;
-    width: 590px;
+    width: 80%;
 }
 
 .class-detail .text-wrapper-6 {
@@ -82,7 +76,7 @@
     position: relative;
     text-align: right;
     white-space: nowrap;
-    width: 579px;
+    width: 80%;
 }
 
 .class-detail .text-wrapper-7 {
@@ -93,18 +87,24 @@
     letter-spacing: 0;
     line-height: normal;
     position: relative;
-    text-align: center;
-    width: 590px;
+    text-align: start;
+    width: 80%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    white-space: normal; /* Ensure text wraps normally */
+    max-height: 200px;
 }
 
 .class-detail .frame-6 {
-    display: inline-flex;
+    display: flex;
     flex: 0 0 auto;
     flex-direction: column;
     gap: 26px;
     padding: 20px 0px;
     position: relative;
-    width: 100%; /* Half of the parent container's width */
+    width: 50%; /* Half of the parent container's width */
+    overflow-y: auto; /* Enable vertical scrolling */
+    white-space: normal; /* Ensure text wraps normally */
+    max-height: 600px;
 }
 
 .class-detail .lecture-name-box-instance {

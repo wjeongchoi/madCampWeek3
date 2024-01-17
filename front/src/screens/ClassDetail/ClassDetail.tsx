@@ -4,7 +4,7 @@ import { Header } from "../../components/Header";
 import { SecondaryButton } from "../../components/SecondaryButton";
 import { LectureNameBox } from "../../components/LectureNameBox/LectureNameBox";
 import "./style.css";
-import { getRequest } from "../../axios";
+import { getRequest, postRequest } from "../../axios";
 
 interface LectureDetail {
   thumbnail_url: string | undefined;
@@ -41,17 +41,30 @@ export const ClassDetail = (): JSX.Element => {
     );
   }, [lectureId]);
 
-  const handleStudyNowClick = () => {
+  const handleStudyNowClick = async () => {
     const userID = localStorage.getItem("userID");
-    if (userID && selectedVideoId !== null) {
-      const selectedVideo = videos.find(
-        (video) => video.video_id === selectedVideoId
-      );
-      navigate(`/watchClass/${selectedVideo?.video_url}`);
-    } else {
+    if (!userID) {
       alert("로그인이 필요한 서비스입니다.");
       navigate("/login");
+      return;
+    } else if (selectedVideoId === null) {
+      alert("학습할 영상을 선택하세요.");
+      return;
     }
+
+    // Directly add the lecture to the user's lectures
+    postRequest(
+      `lecture/create-user-lecture/${userID}/${lectureId}/`,
+      {},
+      () => {
+        console.log("Lecture added to user lectures");
+        navigate(`/watchClass/${lectureId}/${selectedVideoId}`);
+      },
+      (error: any) => {
+        console.error("Error adding lecture to user lectures:", error);
+        alert(error);
+      }
+    );
   };
 
   const handleLectureBoxClick = (videoId: number) => {
@@ -89,8 +102,11 @@ export const ClassDetail = (): JSX.Element => {
               ))}
             </div>
           </div>
+          <SecondaryButton
+            label="지금 학습하기"
+            onClick={handleStudyNowClick}
+          />
         </div>
-        <SecondaryButton label="지금 학습하기" onClick={handleStudyNowClick} />
       </div>
     </div>
   );

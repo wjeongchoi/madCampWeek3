@@ -7,11 +7,12 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 interface LocationState {
   userAnswers: Record<string, string>;
+  questions: { Question: string; Answer: string }[];
 }
 
 export const Answers: React.FC = () => {
   const location = useLocation();
-  const { userAnswers } = (location.state as LocationState) || {};
+  const { userAnswers, questions } = (location.state as LocationState) || {};
 
   const navigate = useNavigate(); // Create navigate function
 
@@ -24,36 +25,16 @@ export const Answers: React.FC = () => {
         <Header className="header-instance" />
         <div className="frame-4">
           <div className="frame-5">
-            <AnswerBox
-              questionNumber="1"
-              questionText="What is deep learning?"
-              modelAnswer="Deep learning is a subset of machine learning..."
-              userAnswer={userAnswers?.["1"] || ""}
-            />
-            <AnswerBox
-              questionNumber="2"
-              questionText="What is deep learning?"
-              modelAnswer="Deep learning is a subset of machine learning..."
-              userAnswer={userAnswers?.["2"] || ""}
-            />
-            <AnswerBox
-              questionNumber="3"
-              questionText="What is deep learning?"
-              modelAnswer="Deep learning is a subset of machine learning..."
-              userAnswer={userAnswers?.["3"] || ""}
-            />
-            <AnswerBox
-              questionNumber="4"
-              questionText="What is deep learning?"
-              modelAnswer="Deep learning is a subset of machine learning..."
-              userAnswer={userAnswers?.["4"] || ""}
-            />
-            <AnswerBox
-              questionNumber="5"
-              questionText="What is deep learning?"
-              modelAnswer="Deep learning is a subset of machine learning..."
-              userAnswer={userAnswers?.["5"] || ""}
-            />
+            {questions &&
+              questions.map((item, index) => (
+                <AnswerBox
+                  key={index}
+                  questionNumber={`${index + 1}`}
+                  questionText={item.Question}
+                  modelAnswer={item.Answer}
+                  userAnswer={userAnswers?.[`${index + 1}`] || ""}
+                />
+              ))}
           </div>
           <div className="secondary-button" onClick={handleFinishLearning}>
             <div className="text-wrapper-7">학습 종료</div>
