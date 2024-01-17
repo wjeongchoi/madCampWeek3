@@ -4,10 +4,11 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    min-height: 100vh;
 }
 
 .questions .div-2 {
-    height: 1126px;
+    min-height: 180vh;
     position: relative;
     width: 100%;
 }

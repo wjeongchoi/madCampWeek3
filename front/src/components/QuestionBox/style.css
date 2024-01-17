@@ -7,7 +7,7 @@
 }
 
 .question-box .frame {
-    height: 65px;
+    height: auto; /* Updated from fixed height */
     position: relative;
     width: 799px;
 }
@@ -17,7 +17,7 @@
     border: 1px solid;
     border-color: #d9d9d9;
     border-radius: 10px;
-    height: 65px;
+    height: auto; /* Updated from fixed height */
     left: 48px;
     position: relative;
     top: 0;
@@ -29,13 +29,16 @@
     font-family: "Noto Sans-DisplaySemiBold", Helvetica;
     font-size: 22px;
     font-weight: 600;
-    height: 44px;
+    height: auto; /* Adjust height as needed */
     letter-spacing: 0;
     line-height: 40px;
+    margin-bottom: 15px; /* Add bottom margin */
     position: relative;
     top: 8px;
-    white-space: nowrap;
-    width: 384px;
+    white-space: normal; /* Allow text wrapping */
+    width: 730px;
+    text-align: left;
+    left: 15px;
 }
 
 .question-box .div {
@@ -86,14 +89,14 @@
     background-color: #ffffff;
     border: 1px solid #d9d9d9;
     border-radius: 10px;
-    color: #b0b0b0;
+    color: #000000;
     font-family: "Noto Sans", Helvetica;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 22px;
     height: 65px;
     letter-spacing: 0;
     line-height: 40px;
-    padding: 12px;
+    padding: 15px;
     position: absolute;
     top: 0;
     left: 46px;
