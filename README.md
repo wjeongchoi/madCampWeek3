@@ -31,10 +31,8 @@
 - 반응형 웹으로, 창 크기에 맞춰 컴포넌트가 정렬됩니다.
 
 ## 1 로그인
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/0a6f2ac9-03d0-4c6e-a25d-9ff6fce7bb1e/Untitled.png)
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/ae2df498-f84d-4c6a-b490-92193d412f4a/Untitled.png)
+<img width="1511" alt="로그인" src="https://github.com/wjeongchoi/madCampWeek3/assets/32153103/06c65a0b-c302-49e5-b538-bc2f05d0651c">
+<img width="1511" alt="회원가입" src="https://github.com/wjeongchoi/madCampWeek3/assets/32153103/79d2ee77-4c12-42d4-b655-57bb5d4a4816">
 
 ### 1.1 주요 기능
 
@@ -47,8 +45,8 @@
 - User model을 만들어 회원가입과 로그인 view를 만듭니다.
 
 ## 2 홈
+![홈](https://github.com/wjeongchoi/madCampWeek3/assets/32153103/db5bc87f-27a9-4a9b-9cd8-ab7eaf64e9dd)
 
-![스크린샷 2024-01-17 오후 6.38.51.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/0538f0d1-4507-4dfc-98a4-33655ef9fc74/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-01-17_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_6.38.51.png)
 
 ### 2.1 주요 기능
 
@@ -56,12 +54,6 @@
 - 로고 또는 홈 탭을 누르면 홈 화면으로 이동합니다.
 
 ## 3  강의 목록
-
-![화면-기록-2024-01-17-오후-7.03.21.gif](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/b1aba0f8-bddd-495a-b8d4-1d7df02e3395/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB-%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8-2024-01-17-%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE-7.03.21.gif)
-
-![마지막_.gif](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/f12f3d39-af0c-40cb-a533-38f15125dbf6/%E1%84%86%E1%85%A1%E1%84%8C%E1%85%B5%E1%84%86%E1%85%A1%E1%86%A8_.gif)
-
-![화면-기록-2024-01-17-오후-8.07.18.gif](https://prod-files-secure.s3.us-west-2.amazonaws.com/f6cb388f-3934-47d6-9928-26d2e10eb0fc/9c79b6e1-17a1-45b1-ac1e-89068b2e1f03/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB-%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8-2024-01-17-%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE-8.07.18.gif)
 
 ### 3.1 주요 기능
 
